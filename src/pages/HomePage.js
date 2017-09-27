@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as authActions from 'actions/authActions';
+import { fetchUsers } from 'actions/authActions';
 import PropTypes from 'prop-types';
 
 class HomePage extends Component {
   static propTypes = {
-    authActions: {
-      fetchUsers: PropTypes.func.isRequired,
-    },
+    fetchUsers: PropTypes.func,
   };
-  componentDidMount() {
-    this.props.authActions.fetchUsers();
+  componentWillMount() {
+    this.props.fetchUsers();
   }
   render() {
     return (
@@ -20,18 +17,12 @@ class HomePage extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
+export default connect(
+  state => ({
     router: state.router,
     auth: state.auth,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return { authActions: bindActionCreators(authActions, dispatch) };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
+  }),
+  {
+    fetchUsers,
+  }
 )(HomePage);

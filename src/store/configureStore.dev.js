@@ -8,14 +8,14 @@ import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
 import reduxBetterPromise from 'redux-better-promise';
-
+import apiClient from '../services/apiClient';
 
 import rootReducer from '../reducers';
 
 export default function configureStore(initialState) {
   const middlewares = [
     reduxImmutableStateInvariant(),
-    reduxBetterPromise(),
+    reduxBetterPromise({ apiClient }),
     routerMiddleware(createHistory()),
   ];
 

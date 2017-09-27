@@ -8,10 +8,10 @@ import {
 export function fetchUsers() {
   return {
     types: {
-      FETCH_USERS,
-      FETCH_USERS_SUCCESS,
-      FETCH_USERS_FAILURE,
+      start: FETCH_USERS,
+      success: FETCH_USERS_SUCCESS,
+      error: FETCH_USERS_FAILURE,
     },
-    promise: ({ client }) => authService(client).fetchUsers(),
+    promise: ({ apiClient }) => authService(apiClient).fetchUsers(),
   };
 }

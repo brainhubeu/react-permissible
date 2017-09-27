@@ -3,10 +3,11 @@ import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import reduxBetterPromise from 'redux-better-promise';
 import rootReducer from '../reducers';
+import apiClient from '../services/apiClient';
 
 export default function configureStore(initialState) {
   const middlewares = [
-    reduxBetterPromise(),
+    reduxBetterPromise({ apiClient }),
     routerMiddleware(createHistory()),
   ];
 
