@@ -3,12 +3,6 @@
   "extends": [
     "brainhub"
   ],
-  "rules": {
-
-  },
-  "globals": {
-
-  },
   "settings": {
     "import/resolve": {
       "moduleDirectory": ["node_modules", "src"]
