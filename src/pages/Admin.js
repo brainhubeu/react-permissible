@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class Admin extends Component {
+class Admin extends Component {
   render() {
     return (
       <div>
@@ -10,3 +11,10 @@ export default class Admin extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({
+    router: state.router,
+    auth: state.auth,
+  })
+)(Admin);

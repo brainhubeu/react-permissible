@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import {
   fetchUsers,
   login,
 } from '../actions/authActions';
-import PropTypes from 'prop-types';
 import UsersList from '../components/usersList.component';
 
 class HomePage extends Component {
@@ -30,10 +31,12 @@ class HomePage extends Component {
       !fetching && (
         <div>
           <h1>Roles permissions</h1>
+          <Link to={'/Admin'}>{'Admin panel'}</Link>
           <UsersList
             users={users}
             login={login}
           />
+
         </div>
       )
     );
