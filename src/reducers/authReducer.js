@@ -4,7 +4,7 @@ import {
   FETCH_USERS_FAILURE,
   LOGIN_ACTION,
   LOGIN_ACTION_SUCCESS,
-  LOGIN_ACTION_ERROR,
+  LOGIN_ACTION_FAILURE,
 } from '../constants/actionTypes';
 import initialState from './initialState';
 
@@ -43,7 +43,7 @@ export default function auth(state = initialState.auth, action) {
         user: action.result.user,
         isAuthenticated: true,
       };
-    case LOGIN_ACTION_ERROR:
+    case LOGIN_ACTION_FAILURE:
       return {
         ...state,
         loggingIn: false,

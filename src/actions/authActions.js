@@ -3,6 +3,9 @@ import {
   FETCH_USERS,
   FETCH_USERS_SUCCESS,
   FETCH_USERS_FAILURE,
+  LOGIN_ACTION,
+  LOGIN_ACTION_SUCCESS,
+  LOGIN_ACTION_FAILURE,
 } from '../constants/actionTypes';
 
 export function fetchUsers() {
@@ -13,5 +16,16 @@ export function fetchUsers() {
       error: FETCH_USERS_FAILURE,
     },
     promise: ({ apiClient }) => authService(apiClient).fetchUsers(),
+  };
+}
+
+export function login(id) {
+  return {
+    types: {
+      start: LOGIN_ACTION,
+      success: LOGIN_ACTION_SUCCESS,
+      error: LOGIN_ACTION_FAILURE,
+    },
+    promise: ({ apiClient }) => authService(apiClient).login(id),
   };
 }
