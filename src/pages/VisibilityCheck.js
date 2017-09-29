@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import AccessControl from '../components/accessControl.hoc';
 import AccessibleComponent from '../components/accessibleComponent.component';
+import RenderPermissive from '../components/renderPermissive';
 
 class Admin extends Component {
   static propTypes = {
@@ -48,6 +49,13 @@ class Admin extends Component {
         <AccessibleComponentAdmin/>
         <AccessibleComponentUser/>
         <AccessibleComponentAll/>
+
+        <RenderPermissive
+          userPermissions={permissions}
+          requiredPermissions={['VIEW_POSTS']}
+        >
+          {'RenderPermissive Component example. Only users with VIEW_POSTS permission see it.'}
+        </RenderPermissive>
       </div>
     );
   }
