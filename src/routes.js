@@ -7,6 +7,7 @@ import { createBrowserHistory } from 'history';
 
 import App from 'containers/App';
 import Admin from 'pages/Admin';
+import VisibilityCheck from 'pages/VisibilityCheck';
 import HomePage from 'pages/HomePage';
 import NotFoundPage from 'pages/NotFoundPage.js';
 import AccessControl from './components/accessControl.hoc';
@@ -52,6 +53,7 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/admin" component={accessibleAdmin} />
+            <Route exact path="/visibility-check" component={VisibilityCheck} />
             <Route path="*" component={NotFoundPage} />
           </Switch>
         </App>
