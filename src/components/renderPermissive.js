@@ -4,8 +4,8 @@ import _ from 'lodash';
 
 class RenderPermissive extends Component {
   static propTypes = {
-    userPermissions: PropTypes.arrayOf(PropTypes.string),
-    requiredPermissions: PropTypes.arrayOf(PropTypes.string),
+    userPermissions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    requiredPermissions: PropTypes.arrayOf(PropTypes.string).isRequired,
     children: PropTypes.element.isRequired,
   }
   constructor(props) {
