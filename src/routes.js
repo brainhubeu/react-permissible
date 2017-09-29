@@ -35,7 +35,16 @@ class Routes extends Component {
       permissions = user.permissions;
     }
 
-    const accessibleAdmin = AccessControl(Admin, permissions, ['ACCESS_ADMIN']);
+    function adminCallback({ userPermissions, requiredPermissions }, history) {
+      history.replace('/');
+    }
+
+    const accessibleAdmin = AccessControl(
+      Admin,
+      permissions,
+      ['ACCESS_ADMIN'],
+      adminCallback
+    );
 
     return (
       <ConnectedRouter history={this.history}>
@@ -56,4 +65,3 @@ export default connect(
     auth: state.auth,
   })
 )(Routes);
-
