@@ -1,31 +1,47 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 // @TODO comment this shit
 function accessControl(
   AccessedComponent,
   userPermissions,
-  neededPermissions,
+  requiredPermissions,
+  callbackFunction,
 ) {
-  return class AccessControl extends Component {
+  class AccessControl extends Component {
+    static propTypes = {
+      history: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+    };
+
     constructor(props) {
       super(props);
+    }
 
-      if (!_.isEmpty(userPermissions)
-        && !this.checkPermissions()
-      ) {
-        console.log('user is not permitted');
-      }
+    componentWillMount() {
+      this.checkPermissions();
+    }
+
+    componentWillReceiveProps() {
+      this.checkPermissions();
     }
 
     checkPermissions() {
-      return _.intersection(userPermissions, neededPermissions).length;
+      if (!_.intersection(userPermissions, requiredPermissions).length) {
+        callbackFunction({
+          userPermissions,
+          requiredPermissions,
+        }, this.props.history);
+      }
     }
 
     render() {
       return <AccessedComponent {...this.props}/>;
     }
-  };
+  }
+
+  return withRouter(AccessControl);
 }
 
 export default accessControl;
