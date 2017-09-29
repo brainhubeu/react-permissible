@@ -31,12 +31,12 @@ class HomePage extends Component {
       !fetching && (
         <div>
           <h1>Roles permissions</h1>
-          <Link to={'/Admin'}>{'Admin panel'}</Link>
+          <Link to={'/admin'}>{'Restricted page (Requires ADMIN_ACCESS permission)'}</Link><br/>
+          <Link to={'/visibility-check'}>{'Component visibility check'}</Link>
           <UsersList
             users={users}
             login={login}
           />
-
         </div>
       )
     );

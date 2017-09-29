@@ -3,7 +3,6 @@ import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-// @TODO comment this shit
 function accessControl(
   AccessedComponent,
   userPermissions,
@@ -17,6 +16,9 @@ function accessControl(
 
     constructor(props) {
       super(props);
+      this.state = {
+        userPermitted: true,
+      };
     }
 
     componentWillMount() {
@@ -29,15 +31,26 @@ function accessControl(
 
     checkPermissions() {
       if (!_.intersection(userPermissions, requiredPermissions).length) {
-        callbackFunction({
-          userPermissions,
-          requiredPermissions,
-        }, this.props.history);
+        this.setState({
+          userPermitted: false,
+        });
+
+        if (callbackFunction) {
+          callbackFunction({
+            userPermissions,
+            requiredPermissions,
+          },
+          this.props.history);
+        }
       }
     }
 
     render() {
-      return <AccessedComponent {...this.props}/>;
+      const { userPermitted } = this.state;
+      return (
+        userPermitted
+        && <AccessedComponent {...this.props}/>
+      );
     }
   }
 
