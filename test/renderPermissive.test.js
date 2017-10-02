@@ -15,7 +15,6 @@ chai.should();
 
 describe('RenderPermissive', () => {
   let props;
-  let mountedRenderPermissive;
 
   const ChildComponent = () => (
     <div>
@@ -23,30 +22,23 @@ describe('RenderPermissive', () => {
     </div>
   );
 
-  // return enzyme's ReactWrapper of RenderPermissive Component
-  const renderPermissive = () => {
-    if (!mountedRenderPermissive) {
-      mountedRenderPermissive = mount(
-        <RenderPermissive {...props}>
-          <ChildComponent/>
-        </RenderPermissive>
-      );
-    }
-    return mountedRenderPermissive;
-  };
-
   // clear props before each test
   beforeEach(() => {
     props = {
       userPermissions: [],
       requiredPermimissions: [],
     };
-    mountedRenderPermissive = undefined; // eslint-disable-line no-undefined
   });
 
   it('doesn\'t render a <div /> if there are no props', () => {
-    const component = renderPermissive().find('div');
-    component.length.should.be.equal(0);
+    const mountedComponent = mount(
+      <RenderPermissive {...props}>
+        <ChildComponent />
+      </RenderPermissive>
+    );
+
+    const searchedElement = mountedComponent.find('div');
+    searchedElement.length.should.be.equal(0);
   });
 
   it('doesn\'t render a <div /> if there is a permission mismatch', () => {
@@ -54,8 +46,15 @@ describe('RenderPermissive', () => {
       userPermissions: ['REQUIRED_PERMISSION'],
       requiredPermissions: ['ANOTHER_PERMISSION'],
     };
-    const component = renderPermissive().find('div');
-    component.length.should.be.equal(0);
+
+    const mountedComponent = mount(
+      <RenderPermissive {...props}>
+        <ChildComponent />
+      </RenderPermissive>
+    );
+
+    const searchedElement = mountedComponent.find('div');
+    searchedElement.length.should.be.equal(0);
   });
 
   it('always renders a <div /> if the user has required permission', () => {
@@ -63,13 +62,26 @@ describe('RenderPermissive', () => {
       userPermissions: ['REQUIRED_PERMISSION'],
       requiredPermissions: ['REQUIRED_PERMISSION'],
     };
-    const component = renderPermissive().find('div');
-    component.length.should.be.greaterThan(0);
+
+    const mountedComponent = mount(
+      <RenderPermissive {...props}>
+        <ChildComponent />
+      </RenderPermissive>
+    );
+
+    const searchedElement = mountedComponent.find('div');
+    searchedElement.length.should.be.greaterThan(0);
   });
 
   it('doesn\'t render a ChildComponent if there are no props', () => {
-    const component = renderPermissive().find('ChildComponent');
-    component.length.should.be.equal(0);
+    const mountedComponent = mount(
+      <RenderPermissive {...props}>
+        <ChildComponent />
+      </RenderPermissive>
+    );
+
+    const searchedElement = mountedComponent.find('ChildComponent');
+    searchedElement.length.should.be.equal(0);
   });
 
   it('doesn\'t render a ChildComponent if there is a permission mismatch', () => {
@@ -77,8 +89,14 @@ describe('RenderPermissive', () => {
       userPermissions: ['REQUIRED_PERMISSION'],
       requiredPermissions: ['ANOTHER_PERMISSION'],
     };
-    const component = renderPermissive().find('ChildComponent');
-    component.length.should.be.equal(0);
+    const mountedComponent = mount(
+      <RenderPermissive {...props}>
+        <ChildComponent />
+      </RenderPermissive>
+    );
+
+    const searchedElement = mountedComponent.find('ChildComponent');
+    searchedElement.length.should.be.equal(0);
   });
 
   it('always renders a ChildComponent if the user has required permission', () => {
@@ -86,7 +104,13 @@ describe('RenderPermissive', () => {
       userPermissions: ['REQUIRED_PERMISSION'],
       requiredPermissions: ['REQUIRED_PERMISSION'],
     };
-    const component = renderPermissive().find('ChildComponent');
-    component.length.should.be.greaterThan(0);
+    const mountedComponent = mount(
+      <RenderPermissive {...props}>
+        <ChildComponent />
+      </RenderPermissive>
+    );
+
+    const searchedElement = mountedComponent.find('ChildComponent');
+    searchedElement.length.should.be.greaterThan(0);
   });
 });

@@ -9,8 +9,8 @@ export default class UsersList extends Component {
       permissions: PropTypes.arrayOf(PropTypes.string),
     })),
   };
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.handleLogin = this.handleLogin.bind(this);
   }
   handleLogin(id) {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class Admin extends Component {
   render() {
@@ -12,9 +11,4 @@ class Admin extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    router: state.router,
-    auth: state.auth,
-  })
-)(Admin);
+export default Admin;

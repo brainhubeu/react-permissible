@@ -38,13 +38,16 @@ describe('AccessControl HOC', () => {
     mountedComponent = undefined; // eslint-disable-line no-undefined
   });
 
-  it('doesn\'t run a callback function if the permissions are right', () => {
+  it('doesn\'t run a callback function if the permissions are right', done => {
+    let err = null;
+
     renderHOC(
       ['MATCHING_PERMISSIONS'],
       ['MATCHING_PERMISSIONS'],
       () => {
-        console.log('callback function'); // shouldn't be printed
+        err = new Error('Callback function called.');
       });
+    done(err);
   });
 
   it('runs a callback function if the permissions don\'t match', done => {

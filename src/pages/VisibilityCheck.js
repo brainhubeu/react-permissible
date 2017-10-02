@@ -54,7 +54,9 @@ class Admin extends Component {
           userPermissions={permissions}
           requiredPermissions={['VIEW_POSTS']}
         >
-          {'RenderPermissive Component example. Only users with VIEW_POSTS permission see it.'}
+          <div>
+            {'RenderPermissive Component example. Only users with VIEW_POSTS permission see it.'}
+          </div>
         </RenderPermissive>
       </div>
     );
@@ -63,7 +65,6 @@ class Admin extends Component {
 
 export default connect(
   state => ({
-    router: state.router,
     auth: state.auth,
   })
 )(Admin);

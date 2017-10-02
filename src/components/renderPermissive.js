@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
@@ -34,13 +34,7 @@ class RenderPermissive extends Component {
   }
 
   render() {
-    return (
-      this.state.userPermitted && (
-        <div>
-          {this.props.children}
-        </div>
-      )
-    );
+    return this.state.userPermitted && this.props.children;
   }
 }
 
