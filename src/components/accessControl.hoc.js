@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
@@ -53,8 +52,7 @@ function accessControl(
       );
     }
   }
-
-  return withRouter(AccessControl);
+  return AccessControl;
 }
 
 export default accessControl;
