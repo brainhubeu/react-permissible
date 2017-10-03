@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 
 class Admin extends Component {
   render() {
     return (
-      <div>
-        <h1>Admin panel</h1>
-        <p>Only ACCESS_ADMIN-enabled users can go there</p>
-      </div>
+      <Grid>
+        <PageHeader>Admin view</PageHeader>
+        <Row className="show-grid">
+          <Col xs={12}>
+            {'Only ACCESS_ADMIN-enabled users can visit this page'}
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

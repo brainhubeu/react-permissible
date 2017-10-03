@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 import {
   fetchUsers,
   login,
@@ -29,15 +30,23 @@ class HomePage extends Component {
 
     return (
       !fetching && (
-        <div>
-          <h1>Roles permissions</h1>
-          <Link to={'/admin'}>{'Restricted page (Requires ADMIN_ACCESS permission)'}</Link><br/>
-          <Link to={'/visibility-check'}>{'Component visibility check'}</Link>
-          <UsersList
-            users={users}
-            login={login}
-          />
-        </div>
+        <Grid>
+          <PageHeader>roles-permission</PageHeader>
+          <Row className="show-grid">
+            <Col xs={12} md={6}>
+              <h2>Example user selector</h2>
+              <UsersList
+                users={users}
+                login={login}
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <h2>Navigation</h2>
+              <Link to={'/admin'}>{'Restricted page (Requires ADMIN_ACCESS permission)'}</Link><br />
+              <Link to={'/visibility-check'}>{'Component visibility check'}</Link>
+            </Col>
+          </Row>
+        </Grid>
       )
     );
   }
@@ -46,6 +55,7 @@ class HomePage extends Component {
 export default connect(
   state => ({
     auth: state.auth,
+    view: state.view,
   }),
   {
     fetchUsers,

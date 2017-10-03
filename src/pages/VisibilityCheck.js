@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 
 import AccessControl from '../components/accessControl.hoc';
 import AccessibleComponent from '../components/accessibleComponent.component';
@@ -44,21 +45,26 @@ class Admin extends Component {
     );
 
     return (
-      <div>
-        <h1>Visibility check</h1>
-        <AccessibleComponentAdmin/>
-        <AccessibleComponentUser/>
-        <AccessibleComponentAll/>
-
-        <RenderPermissive
-          userPermissions={permissions}
-          requiredPermissions={['VIEW_POSTS']}
-        >
-          <div>
-            {'RenderPermissive Component example. Only users with VIEW_POSTS permission see it.'}
-          </div>
-        </RenderPermissive>
-      </div>
+      <Grid>
+        <PageHeader>Component visibility check</PageHeader>
+        <Row className="show-grid">
+          <Col xs={12} md={6}>
+            <AccessibleComponentAdmin />
+            <AccessibleComponentUser />
+            <AccessibleComponentAll />
+          </Col>
+          <Col xs={12} md={6}>
+            <RenderPermissive
+              userPermissions={permissions}
+              requiredPermissions={['VIEW_POSTS']}
+            >
+              <div>
+                {'RenderPermissive Component example. Users with VIEW_POSTS permission can see it.'}
+              </div>
+            </RenderPermissive>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

@@ -22,16 +22,17 @@ export default class UsersList extends Component {
   render() {
     const { users } = this.props;
     return (
-      <ul>
+      <div>
         {users.map((user, key) =>
-          <li
-            key={key}
+          <a
+            style={{ cursor: 'pointer' }}
             onClick={this.handleLogin(user.id)}
+            key={key}
           >
-            {user.username}
-          </li>
+            {user.username}<br/>
+          </a>
         )}
-      </ul>
+      </div>
     );
   }
 }

@@ -32,7 +32,8 @@
   "dependencies": {
     "chai-enzyme": "^0.8.0",
     "express": "^4.15.2",
-    "jsdom": "^11.2.0"
+    "jsdom": "^11.2.0",
+    "react-bootstrap": "^0.31.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
