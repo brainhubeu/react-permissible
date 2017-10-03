@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import superagent from 'superagent';
-import storage from 'services/storage';
 import config from 'constants/config';
 
 const ApiClient = {
@@ -12,10 +11,6 @@ const ApiClient = {
       const request = superagent[method](this.formatUrl(path));
 
       request.timeout(5000);
-
-      if (config.authentication.header && storage.load(config.authentication.header)) {
-        request.set(config.authentication.header, storage.load(config.authentication.header));
-      }
 
       if (params) {
         request.query(params);
