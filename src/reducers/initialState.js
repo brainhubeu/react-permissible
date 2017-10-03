@@ -3,6 +3,10 @@ export default {
     fetching: true,
     fetchingError: null,
     users: [],
-    loggedUser: {},
+  },
+  view: {
+    modalVisible: false,
+    modalTitle: '',
+    modalMessage: '',
   },
 };

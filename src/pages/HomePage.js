@@ -8,6 +8,7 @@ import {
   login,
 } from '../actions/authActions';
 import UsersList from '../components/usersList.component';
+import NotificationModal from '../components/notificationModal.component';
 
 class HomePage extends Component {
   static propTypes = {
@@ -30,23 +31,27 @@ class HomePage extends Component {
 
     return (
       !fetching && (
-        <Grid>
-          <PageHeader>roles-permission</PageHeader>
-          <Row className="show-grid">
-            <Col xs={12} md={6}>
-              <h2>Example user selector</h2>
-              <UsersList
-                users={users}
-                login={login}
-              />
-            </Col>
-            <Col xs={12} md={6}>
-              <h2>Navigation</h2>
-              <Link to={'/admin'}>{'Restricted page (Requires ADMIN_ACCESS permission)'}</Link><br />
-              <Link to={'/visibility-check'}>{'Component visibility check'}</Link>
-            </Col>
-          </Row>
-        </Grid>
+        <div>
+          <Grid>
+            <PageHeader>roles-permission</PageHeader>
+            <Row className="show-grid">
+              <Col xs={12} md={6}>
+                <h2>Example user selector</h2>
+                <UsersList
+                  users={users}
+                  login={login}
+                />
+              </Col>
+              <Col xs={12} md={6}>
+                <h2>Navigation</h2>
+                <Link to={'/admin'}>{'Restricted page (Requires ADMIN_ACCESS permission)'}</Link><br />
+                <Link to={'/visibility-check'}>{'Component visibility check'}</Link>
+              </Col>
+            </Row>
+          </Grid>
+          <NotificationModal/>
+        </div>
+
       )
     );
   }

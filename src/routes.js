@@ -11,6 +11,9 @@ import VisibilityCheck from 'pages/VisibilityCheck';
 import HomePage from 'pages/HomePage';
 import NotFoundPage from 'pages/NotFoundPage.js';
 import AccessControl from './components/accessControl.hoc';
+import {
+  showModal,
+} from './actions/viewActions';
 
 class Routes extends Component {
   static propTypes = {
@@ -20,6 +23,7 @@ class Routes extends Component {
         permissions: PropTypes.arrayOf(PropTypes.string),
       }),
     }),
+    showModal: PropTypes.func,
   };
 
   constructor(props) {
@@ -29,7 +33,7 @@ class Routes extends Component {
   render() {
     let permissions = [];
 
-    const { auth } = this.props;
+    const { auth, showModal } = this.props;
     const { user } = auth;
 
     if (typeof user !== 'undefined') {
@@ -38,6 +42,11 @@ class Routes extends Component {
 
     function adminCallback({ userPermissions, requiredPermissions }, history) {
       history.replace('/');
+
+      showModal(
+        'Permission denied',
+        'You don\'t have sufficient permissions to visit this page.'
+      );
     }
 
     const accessibleAdmin = AccessControl(
@@ -65,5 +74,9 @@ class Routes extends Component {
 export default connect(
   state => ({
     auth: state.auth,
-  })
+    view: state.view,
+  }),
+  {
+    showModal,
+  }
 )(Routes);
