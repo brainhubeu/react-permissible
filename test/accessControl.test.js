@@ -15,47 +15,37 @@ chai.use(chaiEnzyme());
 chai.should();
 
 describe('AccessControl HOC', () => {
-  let mountedComponent;
-
-  // return enzyme's ReactWrapper of AccessControl Higher Order Component
-  const renderHOC = (userPermissions, requiredPermissions, callback) => {
-    if (!mountedComponent) {
-      const AccessibleRoute = AccessControl(
-        () => <AccessedComponent/>,
-        userPermissions,
-        requiredPermissions,
-        callback,
-      );
-
-      mountedComponent = shallow(
-        <AccessibleRoute/>
-      );
-    }
-    return mountedComponent;
-  };
-
-  beforeEach(() => {
-    mountedComponent = undefined; // eslint-disable-line no-undefined
-  });
-
   it('doesn\'t run a callback function if the permissions are right', done => {
     let err = null;
 
-    renderHOC(
+    const AccessibleRoute = AccessControl(
+      () => <AccessedComponent />,
       ['MATCHING_PERMISSIONS'],
       ['MATCHING_PERMISSIONS'],
       () => {
         err = new Error('Callback function called.');
-      });
+      }
+    );
+
+    shallow(
+      <AccessibleRoute />
+    );
+
     done(err);
   });
 
   it('runs a callback function if the permissions don\'t match', done => {
-    renderHOC(
-      ['REQUIRED_PERMISSION'],
-      ['UNMATCHING_PERMISSION'],
+    const AccessibleRoute = AccessControl(
+      () => <AccessedComponent />,
+      ['MATCHING_PERMISSIONS'],
+      ['UNMATCHING_PERMISSIONS'],
       () => {
         done();
-      });
+      }
+    );
+
+    shallow(
+      <AccessibleRoute/>
+    );
   });
 });

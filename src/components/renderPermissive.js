@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import intersection from 'lodash/intersection';
 
 class RenderPermissive extends Component {
   static propTypes = {
@@ -10,31 +10,18 @@ class RenderPermissive extends Component {
   }
   constructor(props) {
     super(props);
-    this.state = {
-      userPermitted: true,
-    };
-  }
-
-  componentWillMount() {
-    this.checkPermissions();
-  }
-
-  componentWillReceiveProps() {
-    this.checkPermissions();
   }
 
   checkPermissions() {
     const { userPermissions, requiredPermissions } = this.props;
-
-    if (!_.intersection(userPermissions, requiredPermissions).length) {
-      this.setState({
-        userPermitted: false,
-      });
-    }
+    return intersection(userPermissions, requiredPermissions).length;
   }
 
   render() {
-    return this.state.userPermitted && this.props.children;
+    if (this.checkPermissions()) {
+      return this.props.children;
+    }
+    return null;
   }
 }
 

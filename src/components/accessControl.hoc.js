@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import intersection from 'lodash/intersection';
 
 function accessControl(
   AccessedComponent,
@@ -13,43 +13,33 @@ function accessControl(
       history: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     };
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        userPermitted: true,
-      };
-    }
-
     componentWillMount() {
-      this.checkPermissions();
+      this.checkPermissions() || this.runCallback();
     }
 
     componentWillReceiveProps() {
-      this.checkPermissions();
+      this.checkPermissions() || this.runCallback();
     }
 
-    checkPermissions() {
-      if (!_.intersection(userPermissions, requiredPermissions).length) {
-        this.setState({
-          userPermitted: false,
-        });
-
-        if (callbackFunction) {
-          callbackFunction({
-            userPermissions,
-            requiredPermissions,
-          },
-          this.props.history);
-        }
+    runCallback() {
+      if (callbackFunction) {
+        return callbackFunction({
+          userPermissions,
+          requiredPermissions,
+        },
+        this.props.history);
       }
     }
 
+    checkPermissions() {
+      return intersection(userPermissions, requiredPermissions).length;
+    }
+
     render() {
-      const { userPermitted } = this.state;
-      return (
-        userPermitted
-        && <AccessedComponent {...this.props}/>
-      );
+      if (this.checkPermissions()) {
+        return <AccessedComponent {...this.props}/>;
+      }
+      return null;
     }
   }
   return AccessControl;
