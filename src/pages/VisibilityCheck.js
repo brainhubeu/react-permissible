@@ -5,7 +5,7 @@ import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 
 import Permissible from '../components/permissible';
 import AccessibleComponent from '../components/accessibleComponent.component';
-import RenderPermissive from '../components/permissibleRender';
+import PermissibleRender from '../components/permissibleRender';
 
 class Admin extends Component {
   static propTypes = {
@@ -44,24 +44,69 @@ class Admin extends Component {
       ['ADD_POSTS']
     );
 
+    const NotAlowedComponent = (
+      <div className="accessible-component">
+        <p>This component renders if you dont have needed permission as a substitute.</p>
+      </div>
+    );
+
     return (
       <Grid>
-        <PageHeader>Component visibility check</PageHeader>
+        <PageHeader>
+          Component visibility check
+        </PageHeader>
         <Row className="show-grid">
           <Col xs={12} md={6}>
+            Current permission set
+          </Col>
+          <Col xs={12} md={6}>
+            <code>
+              {permissions.map((permission, key) =>
+                `${permission}, `
+              )}
+            </code>
+          </Col>
+        </Row>
+        <Row className="show-grid">
+          <Col xs={12} md={6}>
+            <h3>Permissible HOC test</h3>
             <AccessibleComponentAdmin />
             <AccessibleComponentUser />
             <AccessibleComponentAll />
           </Col>
           <Col xs={12} md={6}>
-            <RenderPermissive
+            <h3>PermissibleRender test</h3>
+            <PermissibleRender
               userPermissions={permissions}
-              requiredPermissions={['VIEW_POSTS']}
+              requiredPermissions={['VIEW_POSTS', 'ACCESS_ADMIN']}
+              oneperm
             >
-              <div>
-                {'RenderPermissive Component example. Users with VIEW_POSTS permission can see it.'}
-              </div>
-            </RenderPermissive>
+              <AccessibleComponent
+                permission="VIEW_POSTS, ACCESS_ADMIN"
+                oneperm
+              />
+            </PermissibleRender>
+
+            <PermissibleRender
+              userPermissions={permissions}
+              requiredPermissions={['ADD_POSTS', 'VIEW_OWN_POST', 'EDIT_OWN_POST']}
+              oneperm
+            >
+              <AccessibleComponent
+                permission="ADD_POSTS, VIEW_OWN_POST, EDIT_OWN_POST"
+                oneperm
+              />
+            </PermissibleRender>
+
+            <PermissibleRender
+              userPermissions={permissions}
+              requiredPermissions={['ADD_POSTS', 'VIEW_OWN_POST', 'EDIT_OWN_POST']}
+              renderOtherwise={NotAlowedComponent}
+            >
+              <AccessibleComponent
+                permission="ADD_POSTS, VIEW_OWN_POST, EDIT_OWN_POST"
+              />
+            </PermissibleRender>
           </Col>
         </Row>
       </Grid>

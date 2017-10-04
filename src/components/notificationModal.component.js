@@ -13,9 +13,6 @@ class NotificationModal extends Component {
       modalMessage: PropTypes.string,
     }),
   };
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const { view, hideModal } = this.props;
@@ -25,7 +22,6 @@ class NotificationModal extends Component {
     } = view;
 
     return (
-
       <Modal show={modalVisible} onHide={hideModal}>
         <Modal.Header closeButton>
           <Modal.Title>{modalTitle}</Modal.Title>

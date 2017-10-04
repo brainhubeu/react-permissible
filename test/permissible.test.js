@@ -14,7 +14,7 @@ global.window = document.defaultView;
 chai.use(chaiEnzyme());
 chai.should();
 
-describe('AccessControl HOC', () => {
+describe('Permissible HOC', () => {
   it('doesn\'t run a callback function if the permissions are right', done => {
     let err = null;
 
