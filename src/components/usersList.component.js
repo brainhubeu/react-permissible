@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class UsersList extends Component {
   static propTypes = {
-    login: PropTypes.func,
+    selectUser: PropTypes.func,
     users: PropTypes.arrayOf(PropTypes.shape({
       username: PropTypes.string,
       permissions: PropTypes.arrayOf(PropTypes.string),
@@ -15,7 +15,7 @@ export default class UsersList extends Component {
   }
   handleLogin(id) {
     return () => {
-      this.props.login(id);
+      this.props.selectUser(id);
     };
   }
 

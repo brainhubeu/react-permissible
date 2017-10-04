@@ -5,10 +5,12 @@ class Admin extends Component {
   render() {
     return (
       <Grid>
-        <PageHeader>Admin view</PageHeader>
+        <PageHeader>
+          Restricted page
+        </PageHeader>
         <Row className="show-grid">
           <Col xs={12}>
-            {'Only ACCESS_ADMIN-enabled users can visit this page'}
+            This restricted page is available only for users with ACCESS_ADMIN permission.
           </Col>
         </Row>
       </Grid>
