@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 
-import AccessControl from '../components/accessControl.hoc';
+import Permissible from '../components/permissible';
 import AccessibleComponent from '../components/accessibleComponent.component';
-import RenderPermissive from '../components/renderPermissive';
+import RenderPermissive from '../components/permissibleRender';
 
 class Admin extends Component {
   static propTypes = {
@@ -26,19 +26,19 @@ class Admin extends Component {
       permissions = user.permissions;
     }
 
-    const AccessibleComponentAdmin = AccessControl(
+    const AccessibleComponentAdmin = Permissible(
       () => <AccessibleComponent permission="ACCESS_ADMIN" />,
       permissions,
       ['ACCESS_ADMIN']
     );
 
-    const AccessibleComponentUser = AccessControl(
+    const AccessibleComponentUser = Permissible(
       () => <AccessibleComponent permission="VIEW_OWN_POST" />,
       permissions,
       ['VIEW_OWN_POST']
     );
 
-    const AccessibleComponentAll = AccessControl(
+    const AccessibleComponentAll = Permissible(
       () => <AccessibleComponent permission="ADD_POSTS" />,
       permissions,
       ['ADD_POSTS']

@@ -4,7 +4,7 @@ import chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { JSDOM } from 'jsdom';
 
-import AccessControl from '../src/components/accessControl.hoc';
+import AccessControl from '../src/components/permissible';
 import AccessedComponent from '../src/components/accessibleComponent.component';
 
 const { document } = (new JSDOM('')).window;

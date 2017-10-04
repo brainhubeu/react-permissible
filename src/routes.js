@@ -5,12 +5,12 @@ import { ConnectedRouter } from 'react-router-redux';
 import PropTypes from 'prop-types';
 import { createBrowserHistory } from 'history';
 
-import App from 'containers/App';
-import Admin from 'pages/Admin';
-import VisibilityCheck from 'pages/VisibilityCheck';
-import HomePage from 'pages/HomePage';
-import NotFoundPage from 'pages/NotFoundPage.js';
-import AccessControl from './components/accessControl.hoc';
+import App from './containers/App';
+import RestrictedPage from './pages/RestrictedPage';
+import VisibilityCheck from './pages/VisibilityCheck';
+import HomePage from './pages/HomePage';
+import NotFoundPage from './pages/NotFoundPage.js';
+import Permissible from './components/permissible';
 import {
   showModal,
 } from './actions/viewActions';
@@ -40,7 +40,7 @@ class Routes extends Component {
       permissions = user.permissions;
     }
 
-    function adminCallback({ userPermissions, requiredPermissions }, history) {
+    function notPermittedCallback({ userPermissions, requiredPermissions }, history) {
       history.replace('/');
 
       showModal(
@@ -49,11 +49,11 @@ class Routes extends Component {
       );
     }
 
-    const accessibleAdmin = AccessControl(
-      Admin,
+    const AccessiblePage = Permissible(
+      RestrictedPage,
       permissions,
       ['ACCESS_ADMIN'],
-      adminCallback
+      notPermittedCallback
     );
 
     return (
@@ -61,7 +61,7 @@ class Routes extends Component {
         <App>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/admin" component={accessibleAdmin} />
+            <Route exact path="/restricted" component={AccessiblePage} />
             <Route exact path="/visibility-check" component={VisibilityCheck} />
             <Route path="*" component={NotFoundPage} />
           </Switch>

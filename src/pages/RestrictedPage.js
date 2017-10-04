@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 
-class Admin extends Component {
+class RestrictedPage extends Component {
   render() {
     return (
       <Grid>
@@ -18,4 +18,4 @@ class Admin extends Component {
   }
 }
 
-export default Admin;
+export default RestrictedPage;

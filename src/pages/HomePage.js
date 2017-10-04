@@ -38,7 +38,7 @@ class HomePage extends Component {
         <div>
           <Grid>
             <PageHeader>
-              roles-permission<br/>
+              Permissible<br/>
               <small>
                 Selected user: {(user && user.username) || 'none'}
               </small>
@@ -53,7 +53,7 @@ class HomePage extends Component {
               </Col>
               <Col xs={12} md={6}>
                 <h2>Navigation</h2>
-                <Link to={'/admin'}>
+                <Link to={'/restricted'}>
                   Restricted page example (Requires ADMIN_ACCESS permission)
                 </Link><br />
                 <Link to={'/visibility-check'}>
@@ -64,7 +64,6 @@ class HomePage extends Component {
           </Grid>
           <NotificationModal/>
         </div>
-
       )
     );
   }

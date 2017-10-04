@@ -2,7 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import intersection from 'lodash/intersection';
 
-class RenderPermissive extends Component {
+class PermissibleRender extends Component {
   static propTypes = {
     userPermissions: PropTypes.arrayOf(PropTypes.string).isRequired,
     requiredPermissions: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -25,4 +25,4 @@ class RenderPermissive extends Component {
   }
 }
 
-export default RenderPermissive;
+export default PermissibleRender;
