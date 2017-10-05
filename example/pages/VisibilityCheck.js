@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 
-import Permissible from '../components/permissible';
+import Permissible from '../../src/components/permissible';
 import AccessibleComponent from '../components/accessibleComponent.component';
-import PermissibleRender from '../components/permissibleRender';
+import PermissibleRender from '../../src/components/permissibleRender';
 
 class Admin extends Component {
   static propTypes = {
