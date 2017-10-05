@@ -2,17 +2,13 @@ import usersFixture from '../fixtures/users.fixture';
 
 const authService = apiClient => ({
   fetchUsers() {
-    return new Promise((resolve, reject) => {
-      resolve({
-        users: usersFixture,
-      });
+    return Promise.resolve({
+      users: usersFixture,
     });
   },
   selectUser(id) {
-    return new Promise((resolve, reject) => {
-      resolve({
-        user: usersFixture[id],
-      });
+    return Promise.resolve({
+      user: usersFixture[id],
     });
   },
 });
