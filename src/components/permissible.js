@@ -8,7 +8,12 @@ export function Permissible(
   userPermissions,
   requiredPermissions,
   callbackFunction,
+  oneperm,
 ) {
+  const permissionsStatus = oneperm
+    ? intersection(userPermissions, requiredPermissions).length
+    : isSubset(userPermissions, requiredPermissions);
+
   class PermissibleHOC extends Component {
     static propTypes = {
       oneperm: PropTypes.bool,
@@ -16,11 +21,9 @@ export function Permissible(
     };
 
     componentWillMount() {
-      this.checkPermissions() || this.runCallback();
-    }
-
-    componentWillReceiveProps() {
-      this.checkPermissions() || this.runCallback();
+      if (!permissionsStatus) {
+        this.runCallback();
+      }
     }
 
     runCallback() {
@@ -31,19 +34,11 @@ export function Permissible(
         },
         this.props.history);
       }
-    }
-
-    checkPermissions() {
-      const { oneperm } = this.props;
-
-      if (oneperm) {
-        return intersection(userPermissions, requiredPermissions).length;
-      }
-      return isSubset(userPermissions, requiredPermissions);
+      return;
     }
 
     render() {
-      if (this.checkPermissions()) {
+      if (permissionsStatus) {
         return <RestrictedComponent {...this.props}/>;
       }
       return null;

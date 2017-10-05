@@ -91,5 +91,6 @@
   "repository": {
     "type": "git",
     "url": ""
-  }
+  },
+  "main": "./lib/react-permissible.js"
 }

@@ -11,9 +11,6 @@ export class PermissibleRender extends Component {
     children: PropTypes.element.isRequired,
     renderOtherwise: PropTypes.element,
   }
-  constructor(props) {
-    super(props);
-  }
 
   checkPermissions() {
     const { userPermissions, requiredPermissions, oneperm } = this.props;

@@ -48,4 +48,56 @@ describe('Permissible HOC', () => {
       <AccessibleRoute/>
     );
   });
+
+  it('doesn\'t run a callback function if the user has one of necessary permissions and `oneperm` is `true`', done => {
+    let err = null;
+
+    const AccessibleRoute = Permissible(
+      () => <AccessedComponent/>,
+      ['REQUIRED_PERMISSION'],
+      ['REQUIRED_PERMISSION', 'ANOTHER_PERMISSION'],
+      () => {
+        err = new Error('Callback function called.');
+      },
+      true,
+    );
+
+    shallow(
+      <AccessibleRoute />
+    );
+
+    done(err);
+  });
+
+  it('runs a callback function if the user has one of necessary permissions and `oneperm` is `false`', done => {
+    const AccessibleRoute = Permissible(
+      () => <AccessedComponent />,
+      ['REQUIRED_PERMISSION'],
+      ['REQUIRED_PERMISSION', 'ANOTHER_PERMISSION'],
+      () => {
+        done();
+      },
+      false,
+    );
+
+    shallow(
+      <AccessibleRoute />
+    );
+  });
+
+  it('doesn\'t run a callback function if it is not defined', done => {
+    const AccessibleRoute = Permissible(
+      () => <AccessedComponent />,
+      ['REQUIRED_PERMISSION'],
+      ['REQUIRED_PERMISSION', 'ANOTHER_PERMISSION'],
+      null,
+      false,
+    );
+
+    shallow(
+      <AccessibleRoute />
+    );
+
+    done();
+  });
 });
