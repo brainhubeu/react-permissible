@@ -10,7 +10,8 @@ import RestrictedPage from './pages/RestrictedPage';
 import VisibilityCheck from './pages/VisibilityCheck';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage.js';
-import Permissible from '../src/components/permissible';
+import { Permissible } from '../lib/react-permissible';
+
 import {
   showModal,
 } from './actions/viewActions';

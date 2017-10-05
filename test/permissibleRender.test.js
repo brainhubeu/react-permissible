@@ -4,7 +4,7 @@ import chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { JSDOM } from 'jsdom';
 
-import PermissibleRender from '../src/components/permissibleRender';
+import { PermissibleRender } from '../src/components/permissibleRender';
 
 const { document } = (new JSDOM('')).window;
 global.document = document;

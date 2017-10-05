@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import intersection from 'lodash/intersection';
 import isSubset from 'is-subset';
 
-function permissible(
+export function Permissible(
   RestrictedComponent,
   userPermissions,
   requiredPermissions,
   callbackFunction,
 ) {
-  class Permissible extends Component {
+  class PermissibleHOC extends Component {
     static propTypes = {
       oneperm: PropTypes.bool,
       history: PropTypes.object, // eslint-disable-line react/forbid-prop-types
@@ -49,7 +49,5 @@ function permissible(
       return null;
     }
   }
-  return Permissible;
+  return PermissibleHOC;
 }
-
-export default permissible;

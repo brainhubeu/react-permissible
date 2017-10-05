@@ -4,8 +4,8 @@ import chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { JSDOM } from 'jsdom';
 
-import AccessControl from '../src/components/permissible';
-import AccessedComponent from '../src/components/accessibleComponent.component';
+import { Permissible } from '../src/components/permissible';
+import AccessedComponent from '../example/components/accessibleComponent.component';
 
 const { document } = (new JSDOM('')).window;
 global.document = document;
@@ -18,7 +18,7 @@ describe('Permissible HOC', () => {
   it('doesn\'t run a callback function if the permissions are right', done => {
     let err = null;
 
-    const AccessibleRoute = AccessControl(
+    const AccessibleRoute = Permissible(
       () => <AccessedComponent />,
       ['MATCHING_PERMISSIONS'],
       ['MATCHING_PERMISSIONS'],
@@ -35,7 +35,7 @@ describe('Permissible HOC', () => {
   });
 
   it('runs a callback function if the permissions don\'t match', done => {
-    const AccessibleRoute = AccessControl(
+    const AccessibleRoute = Permissible(
       () => <AccessedComponent />,
       ['MATCHING_PERMISSIONS'],
       ['UNMATCHING_PERMISSIONS'],
