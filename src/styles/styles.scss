@@ -6,3 +6,14 @@ body {
   font: 'Roboto', Arial, sans-serif;
   font-smoothing: antialiased;
 }
+
+.show-grid.row {
+  margin-bottom: 30px;
+}
+
+.accessible-component {
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 10px 10px 0;
+  width: 100%;
+}

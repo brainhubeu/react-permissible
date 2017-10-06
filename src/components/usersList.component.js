@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class UsersList extends Component {
   static propTypes = {
-    login: PropTypes.func,
+    selectUser: PropTypes.func,
     users: PropTypes.arrayOf(PropTypes.shape({
       username: PropTypes.string,
       permissions: PropTypes.arrayOf(PropTypes.string),
@@ -15,23 +15,24 @@ export default class UsersList extends Component {
   }
   handleLogin(id) {
     return () => {
-      this.props.login(id);
+      this.props.selectUser(id);
     };
   }
 
   render() {
     const { users } = this.props;
     return (
-      <ul>
+      <div>
         {users.map((user, key) =>
-          <li
-            key={key}
+          <a
+            style={{ cursor: 'pointer' }}
             onClick={this.handleLogin(user.id)}
+            key={key}
           >
-            {user.username}
-          </li>
+            {user.username}<br/>
+          </a>
         )}
-      </ul>
+      </div>
     );
   }
 }

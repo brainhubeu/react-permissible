@@ -4,7 +4,7 @@ import chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { JSDOM } from 'jsdom';
 
-import RenderPermissive from '../src/components/renderPermissive';
+import PermissibleRender from '../src/components/permissibleRender';
 
 const { document } = (new JSDOM('')).window;
 global.document = document;
@@ -13,7 +13,7 @@ global.window = document.defaultView;
 chai.use(chaiEnzyme());
 chai.should();
 
-describe('RenderPermissive', () => {
+describe('PermissibleRender', () => {
   let props;
 
   const ChildComponent = () => (
@@ -32,9 +32,9 @@ describe('RenderPermissive', () => {
 
   it('doesn\'t render a <div /> if there are no props', () => {
     const mountedComponent = mount(
-      <RenderPermissive {...props}>
+      <PermissibleRender {...props}>
         <ChildComponent />
-      </RenderPermissive>
+      </PermissibleRender>
     );
 
     const searchedElement = mountedComponent.find('div');
@@ -48,9 +48,9 @@ describe('RenderPermissive', () => {
     };
 
     const mountedComponent = mount(
-      <RenderPermissive {...props}>
+      <PermissibleRender {...props}>
         <ChildComponent />
-      </RenderPermissive>
+      </PermissibleRender>
     );
 
     const searchedElement = mountedComponent.find('div');
@@ -64,9 +64,9 @@ describe('RenderPermissive', () => {
     };
 
     const mountedComponent = mount(
-      <RenderPermissive {...props}>
+      <PermissibleRender {...props}>
         <ChildComponent />
-      </RenderPermissive>
+      </PermissibleRender>
     );
 
     const searchedElement = mountedComponent.find('div');
@@ -75,9 +75,9 @@ describe('RenderPermissive', () => {
 
   it('doesn\'t render a ChildComponent if there are no props', () => {
     const mountedComponent = mount(
-      <RenderPermissive {...props}>
+      <PermissibleRender {...props}>
         <ChildComponent />
-      </RenderPermissive>
+      </PermissibleRender>
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -90,9 +90,9 @@ describe('RenderPermissive', () => {
       requiredPermissions: ['ANOTHER_PERMISSION'],
     };
     const mountedComponent = mount(
-      <RenderPermissive {...props}>
+      <PermissibleRender {...props}>
         <ChildComponent />
-      </RenderPermissive>
+      </PermissibleRender>
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -105,9 +105,9 @@ describe('RenderPermissive', () => {
       requiredPermissions: ['REQUIRED_PERMISSION'],
     };
     const mountedComponent = mount(
-      <RenderPermissive {...props}>
+      <PermissibleRender {...props}>
         <ChildComponent />
-      </RenderPermissive>
+      </PermissibleRender>
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');

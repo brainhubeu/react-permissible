@@ -4,12 +4,17 @@ import PropTypes from 'prop-types';
 export default class AccessibleItem extends Component {
   static propTypes = {
     permission: PropTypes.string,
+    oneperm: PropTypes.bool,
   };
 
   render() {
-    const { permission } = this.props;
+    const { permission, oneperm } = this.props;
     return (
-      <p>Only users with {permission} permission can see this.</p>
+      <div className="accessible-component">
+        <p>
+          {oneperm ? 'One of' : 'Whole set of'} <code>{permission}</code> is necessary to see this component.
+        </p>
+      </div>
     );
   }
 }

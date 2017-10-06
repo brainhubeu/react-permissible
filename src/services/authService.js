@@ -1,21 +1,15 @@
+import usersFixture from '../fixtures/users.fixture';
+
 const authService = apiClient => ({
   fetchUsers() {
-    return apiClient.get('/users/all')
-      .then(result => {
-        if (result.body.users) {
-          return Promise.resolve(result.body);
-        }
-      })
-      .catch(error => Promise.reject(error.body.message));
+    return Promise.resolve({
+      users: usersFixture,
+    });
   },
-  login(id) {
-    return apiClient.get(`/users/${id}`)
-      .then(result => {
-        if (result.body.user) {
-          return Promise.resolve(result.body);
-        }
-      })
-      .catch(error => Promise.reject(error.body.message));
+  selectUser(id) {
+    return Promise.resolve({
+      user: usersFixture[id],
+    });
   },
 });
 

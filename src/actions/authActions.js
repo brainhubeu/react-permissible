@@ -19,13 +19,13 @@ export function fetchUsers() {
   };
 }
 
-export function login(id) {
+export function selectUser(id) {
   return {
     types: {
       start: LOGIN_ACTION,
       success: LOGIN_ACTION_SUCCESS,
       error: LOGIN_ACTION_FAILURE,
     },
-    promise: ({ apiClient }) => authService(apiClient).login(id),
+    promise: ({ apiClient }) => authService(apiClient).selectUser(id),
   };
 }

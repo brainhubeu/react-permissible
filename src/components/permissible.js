@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import intersection from 'lodash/intersection';
+import isSubset from 'is-subset';
 
-function accessControl(
-  AccessedComponent,
+function permissible(
+  RestrictedComponent,
   userPermissions,
   requiredPermissions,
   callbackFunction,
 ) {
-  class AccessControl extends Component {
+  class Permissible extends Component {
     static propTypes = {
+      oneperm: PropTypes.bool,
       history: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     };
 
@@ -32,17 +34,22 @@ function accessControl(
     }
 
     checkPermissions() {
-      return intersection(userPermissions, requiredPermissions).length;
+      const { oneperm } = this.props;
+
+      if (oneperm) {
+        return intersection(userPermissions, requiredPermissions).length;
+      }
+      return isSubset(userPermissions, requiredPermissions);
     }
 
     render() {
       if (this.checkPermissions()) {
-        return <AccessedComponent {...this.props}/>;
+        return <RestrictedComponent {...this.props}/>;
       }
       return null;
     }
   }
-  return AccessControl;
+  return Permissible;
 }
 
-export default accessControl;
+export default permissible;
