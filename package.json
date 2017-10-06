@@ -6,7 +6,6 @@
     "npm": ">=4"
   },
   "scripts": {
-    "preinstall": "node tools/nodeVersionCheck.js",
     "lint": "esw webpack.config.* src tools test features --color",
     "clean-dist": "rm -rf ./lib && mkdir lib",
     "prebuild": "npm run clean-dist",
@@ -47,6 +46,7 @@
     "css-loader": "^0.28.4",
     "cucumber": "^2.3.1",
     "enzyme": "^2.9.1",
+    "enzyme-adapter-react-15": "^1.0.1",
     "eslint": "^4.1.1",
     "eslint-config-brainhub": "^1.6.3",
     "eslint-watch": "^3.1.2",
@@ -86,6 +86,10 @@
     "webpack": "^3.0.0",
     "webpack-dev-middleware": "^1.11.0",
     "webpack-hot-middleware": "^2.18.0"
+  },
+  "peerDependencies": {
+    "react": ">0.14.0 || >15.0.0",
+    "react-dom": ">0.14.0 || >15.0.0"
   },
   "keywords": [],
   "repository": {
