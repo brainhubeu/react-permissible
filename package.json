@@ -6,7 +6,6 @@
     "npm": ">=4"
   },
   "scripts": {
-    "preinstall": "node tools/nodeVersionCheck.js",
     "lint": "esw webpack.config.* src tools test features --color",
     "clean-dist": "rm -rf ./lib && mkdir lib",
     "prebuild": "npm run clean-dist",
@@ -86,6 +85,10 @@
     "webpack": "^3.0.0",
     "webpack-dev-middleware": "^1.11.0",
     "webpack-hot-middleware": "^2.18.0"
+  },
+  "peerDependencies": {
+    "react": ">0.14.0 || >15.0.0",
+    "react-dom": ">0.14.0 || >15.0.0"
   },
   "keywords": [],
   "repository": {
