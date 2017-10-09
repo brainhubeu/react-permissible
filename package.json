@@ -10,7 +10,7 @@
     "clean-dist": "rm -rf ./lib && mkdir lib",
     "prebuild": "npm run clean-dist",
     "build": "node tools/build.js",
-    "start:example": "node tools/exampleServer.js",
+    "example": "node tools/exampleServer.js",
     "test": "mocha tools/testSetup.js \"./test/**/*.js\"",
     "test:coverage": "NODE_PATH=example babel-node ./node_modules/.bin/isparta cover _mocha -- --require ./tools/testSetup.js \"./test/**/*.js\" && open coverage/lcov-report/index.html",
     "precommit": "npm run lint"
