@@ -3,11 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 
-import Permissible from '../components/permissible';
 import AccessibleComponent from '../components/accessibleComponent.component';
-import PermissibleRender from '../components/permissibleRender';
+import { Permissible, PermissibleRender } from '../../lib/react-permissible';
 
-class Admin extends Component {
+class VisibilityCheck extends Component {
   static propTypes = {
     auth: PropTypes.shape({
       fetching: PropTypes.bool,
@@ -118,4 +117,4 @@ export default connect(
   state => ({
     auth: state.auth,
   })
-)(Admin);
+)(VisibilityCheck);

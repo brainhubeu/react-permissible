@@ -3,16 +3,13 @@ import PropTypes from 'prop-types';
 import intersection from 'lodash/intersection';
 import isSubset from 'is-subset';
 
-class PermissibleRender extends Component {
+export class PermissibleRender extends Component {
   static propTypes = {
     oneperm: PropTypes.bool,
     userPermissions: PropTypes.arrayOf(PropTypes.string).isRequired,
     requiredPermissions: PropTypes.arrayOf(PropTypes.string).isRequired,
     children: PropTypes.element.isRequired,
     renderOtherwise: PropTypes.element,
-  }
-  constructor(props) {
-    super(props);
   }
 
   checkPermissions() {
@@ -35,5 +32,3 @@ class PermissibleRender extends Component {
     return null;
   }
 }
-
-export default PermissibleRender;

@@ -1,16 +1,7 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import { Permissible } from './components/permissible';
+import { PermissibleRender } from './components/permissibleRender';
 
-import Routes from './routes';
-import configureStore from './store/configureStore';
-import './styles/styles.scss';
-
-const store = configureStore();
-
-render(
-  <Provider store={store}>
-    <Routes/>
-  </Provider>,
-  document.getElementById('app')
-);
+export {
+  Permissible,
+  PermissibleRender,
+};

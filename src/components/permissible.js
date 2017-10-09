@@ -3,24 +3,27 @@ import PropTypes from 'prop-types';
 import intersection from 'lodash/intersection';
 import isSubset from 'is-subset';
 
-function permissible(
+export function Permissible(
   RestrictedComponent,
   userPermissions,
   requiredPermissions,
   callbackFunction,
+  oneperm,
 ) {
-  class Permissible extends Component {
+  const permissionsStatus = oneperm
+    ? intersection(userPermissions, requiredPermissions).length
+    : isSubset(userPermissions, requiredPermissions);
+
+  class PermissibleHOC extends Component {
     static propTypes = {
       oneperm: PropTypes.bool,
       history: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     };
 
     componentWillMount() {
-      this.checkPermissions() || this.runCallback();
-    }
-
-    componentWillReceiveProps() {
-      this.checkPermissions() || this.runCallback();
+      if (!permissionsStatus) {
+        this.runCallback();
+      }
     }
 
     runCallback() {
@@ -31,25 +34,15 @@ function permissible(
         },
         this.props.history);
       }
-    }
-
-    checkPermissions() {
-      const { oneperm } = this.props;
-
-      if (oneperm) {
-        return intersection(userPermissions, requiredPermissions).length;
-      }
-      return isSubset(userPermissions, requiredPermissions);
+      return;
     }
 
     render() {
-      if (this.checkPermissions()) {
+      if (permissionsStatus) {
         return <RestrictedComponent {...this.props}/>;
       }
       return null;
     }
   }
-  return Permissible;
+  return PermissibleHOC;
 }
-
-export default permissible;

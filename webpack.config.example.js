@@ -8,15 +8,15 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
       'node_modules',
-      'src',
+      'example',
     ],
   },
   devtool: 'eval',
   entry: [
     'babel-polyfill',
-    path.resolve(__dirname, 'src/webpack-public-path.js'), // must be first entry to properly set public path
+    path.resolve(__dirname, 'example/webpack-public-path.js'), // must be first entry to properly set public path
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, 'src/index.js'),
+    path.resolve(__dirname, 'example/index.js'),
   ],
   target: 'web',
   output: {
@@ -33,7 +33,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/index.ejs',
+      template: 'example/index.ejs',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
