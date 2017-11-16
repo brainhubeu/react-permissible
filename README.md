@@ -19,7 +19,7 @@ You can use `react-permissible` in two ways. As an ordinary component and as a H
 
 ### Use as an ordinary component with props:
 ```javascript
-import { PermissibleRender } from 'react-permissive';
+import { PermissibleRender } from 'react-permissible';
 
 ... 
 
@@ -87,7 +87,7 @@ There are also optional props available:
 
 ### Render component when permissions match: 
 ```javascript
-import { PermissibleRender } from 'react-permissive';
+import { PermissibleRender } from 'react-permissible';
 
 ...
 
@@ -123,7 +123,7 @@ render() {
 
 ### Render component when only one permission match: 
 ```javascript
-import { PermissibleRender } from 'react-permissive';
+import { PermissibleRender } from 'react-permissible';
 
 ...
 
@@ -160,7 +160,7 @@ render() {
 
 ### Render another component when permission requirements aren't met:
 ```javascript
-import { PermissibleRender } from 'react-permissive';
+import { PermissibleRender } from 'react-permissible';
 
 ...
 
