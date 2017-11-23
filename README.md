@@ -2,13 +2,15 @@
 
 > Making the permission management for React components easier.
 
-`react-permissible` is a React Component allowing to: 
+[![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
+
+`react-permissible` is a React Component allowing to:
 * manage visibility of particular components depending on user's permissions
 * replacing particular component when the user isn't permitted to see it
 * manage accessability to particular view depending on user's permissions
 * firing a callback when the user isn't allowed to go to access the component/route
 
-## Why? 
+## Why?
 Currently there's no permission management in React, the existing components are either over-engineered (full ACL support etc.), or limited to role-based management. `react-permissible` is simple at it's core and solves only one problem - accessing the Component if the necessary permissions are met, do something otherwise.
 
 ## Installation
@@ -21,7 +23,7 @@ You can use `react-permissible` in two ways. As an ordinary component and as a H
 ```javascript
 import { PermissibleRender } from 'react-permissible';
 
-... 
+...
 
 render() {
   return (
@@ -37,7 +39,7 @@ render() {
 }
 ```
 
-Where: 
+Where:
 * `userPermissions` is an **array** of permissions set for current user
 * `requiredPermissions` is an **array** of required permissions
 * `RestrictedComponent` is a component to render
@@ -46,7 +48,7 @@ There are also optional props available:
 * `oneperm` - only one of required permissions will be necessary (boolean)
 * `renderOtherwise` - another component to be rendered if the permissions do not match (the user isn't permitted).
 
-### Usage as a Higher Order Component: 
+### Usage as a Higher Order Component:
 
 ```javascript
 import { Permissible } from 'react-permissible';
@@ -74,7 +76,7 @@ render() {
 }
 ```
 
-Where: 
+Where:
 * `RestrictedComponent` is a **component** to render
 * `userPermissions` is an **array** of permissions set for current user
 * `requiredPermissions` is an **array** of required permissions
@@ -85,7 +87,7 @@ There are also optional props available:
 
 ## Use cases
 
-### Render component when permissions match: 
+### Render component when permissions match:
 ```javascript
 import { PermissibleRender } from 'react-permissible';
 
@@ -121,7 +123,7 @@ render() {
 }
 ```
 
-### Render component when only one permission match: 
+### Render component when only one permission match:
 ```javascript
 import { PermissibleRender } from 'react-permissible';
 
@@ -181,7 +183,7 @@ render() {
 }
 ```
 
-### Run callback function when permission requirements aren't met: 
+### Run callback function when permission requirements aren't met:
 ```javascript
 import { Permissible } from 'react-permissible';
 
@@ -209,7 +211,7 @@ There is an exemplary app available, allowing to tinker with particular ways of 
 ```
 npm run example
 ```
-and go to [localhost:3000](http://localhost:3000/). 
+and go to [localhost:3000](http://localhost:3000/).
 
 ## Unit tests
 ```
