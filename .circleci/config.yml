@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  install:
+  build:
     working_directory: ~/app
     docker:
       - image: circleci/node:8.9.1
@@ -34,15 +34,26 @@ jobs:
       - run:
           name: Lint
           command: npm run lint
+  compile:
+    docker:
+      - image: circleci/node:8.9.1
+    steps:
+      - checkout
+      - run:
+          name: Compile
+          command: npm run build
 
 workflows:
   version: 2
   build_and_test:
     jobs:
-      - install
+      - build
       - test:
           requires:
-            - install
+            - build
       - lint:
           requires:
-            - install
+            - build
+      - compile:
+          requires:
+            - build
