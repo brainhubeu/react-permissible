@@ -95,7 +95,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/brainhubeu/react-permissible"
   },
   "main": "./lib/react-permissible.js"
 }
