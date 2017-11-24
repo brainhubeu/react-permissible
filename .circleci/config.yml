@@ -33,6 +33,9 @@ jobs:
           name: Test
           command: npm run test:coverage:ci
       - run:
+          name: Generate coveralls config
+          command: echo "repo_token: $REPO_TOKEN" > ./.coveralls.yml
+      - run:
           name: Upload coverage to coveralls
           command: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   lint:
