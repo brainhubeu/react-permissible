@@ -31,7 +31,10 @@ jobs:
             - node_modules
       - run:
           name: Test
-          command: npm run test
+          command: npm run test:coverage:ci
+      - run:
+          name: Upload coverage to coveralls
+          command: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   lint:
     docker:
       - image: circleci/node:8.9.1
