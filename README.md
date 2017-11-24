@@ -225,5 +225,17 @@ npm test
 * Passing a callback function as a prop for `PermissibleRender` component
 
 ## 🍻
-* [@adam-golab](https://github.com/adam-golab) & [@Lukasz-pluszczewski](https://github.com/Lukasz-pluszczewski/) for help
+*  for help
 * [Nocny Kochanek](https://nocnykochanek.pl/) band for power
+
+## License
+
+React-permissible is copyright © 2014-2017 [Brainhub](https://brainhub.eu/) It is free software, and may be redistributed under the terms specified in the [license](license.md).
+
+## About
+
+React-permissible is maintained by [@adam-golab](https://github.com/adam-golab) & [@Lukasz-pluszczewski](https://github.com/Lukasz-pluszczewski/) and the Brainhub development team. It is funded by Brainhub and the names and logos for Brainhub are trademarks of Brainhub Sp. z o.o.. You can check other open-source projects supported/developed by our teammates here. 
+
+[[https://avatars0.githubusercontent.com/u/20307185?s=200&v=4|alt=brainhub]]
+
+We love open-source JavaScript software! See our other projects or hire us to build your next web, desktop and mobile application with JavaScript.
