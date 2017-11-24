@@ -2,8 +2,10 @@
 
 > Making the permission management for React components easier.
 
-[![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
-[![Coverage Status](https://coveralls.io/repos/github/brainhubeu/react-permissible/badge.svg?branch=coveralls)](https://coveralls.io/github/brainhubeu/react-permissible?branch=coveralls)
+[![CircleCI](https://img.shields.io/circleci/project/github/brainhubeu/react-permissible.svg)]()
+[![Coveralls github](https://img.shields.io/coveralls/github/brainhubeu/react-permissible.svg)]()
+[![npm](https://img.shields.io/npm/v/@brainhubeu/react-permissible.svg)]()
+[![npm](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)]()
 
 `react-permissible` is a React Component allowing to:
 * manage visibility of particular components depending on user's permissions
@@ -15,14 +17,14 @@
 Currently there's no permission management in React, the existing components are either over-engineered (full ACL support etc.), or limited to role-based management. `react-permissible` is simple at it's core and solves only one problem - accessing the Component if the necessary permissions are met, do something otherwise.
 
 ## Installation
-`npm i react-permissible`
+`npm i @brainhubeu/react-permissible`
 
 ## Usage
 You can use `react-permissible` in two ways. As an ordinary component and as a Higher Order Component. Both approaches allow you to solve the permission-based rendering a little bit differently.
 
 ### Use as an ordinary component with props:
 ```javascript
-import { PermissibleRender } from 'react-permissible';
+import { PermissibleRender } from '@brainhubeu/react-permissible';
 
 ...
 
@@ -52,7 +54,7 @@ There are also optional props available:
 ### Usage as a Higher Order Component:
 
 ```javascript
-import { Permissible } from 'react-permissible';
+import { Permissible } from '@brainhubeu/react-permissible';
 
 ...
 
@@ -90,7 +92,7 @@ There are also optional props available:
 
 ### Render component when permissions match:
 ```javascript
-import { PermissibleRender } from 'react-permissible';
+import { PermissibleRender } from '@brainhubeu/react-permissible';
 
 ...
 
@@ -107,7 +109,7 @@ render() {
 ```
 
 ```javascript
-import { Permissible } from 'react-permissible';
+import { Permissible } from '@brainhubeu/react-permissible';
 
 ...
 
@@ -126,7 +128,7 @@ render() {
 
 ### Render component when only one permission match:
 ```javascript
-import { PermissibleRender } from 'react-permissible';
+import { PermissibleRender } from '@brainhubeu/react-permissible';
 
 ...
 
@@ -144,7 +146,7 @@ render() {
 ```
 
 ```javascript
-import { Permissible } from 'react-permissible';
+import { Permissible } from '@brainhubeu/react-permissible';
 
 ...
 
@@ -163,7 +165,7 @@ render() {
 
 ### Render another component when permission requirements aren't met:
 ```javascript
-import { PermissibleRender } from 'react-permissible';
+import { PermissibleRender } from '@brainhubeu/react-permissible';
 
 ...
 
@@ -186,7 +188,7 @@ render() {
 
 ### Run callback function when permission requirements aren't met:
 ```javascript
-import { Permissible } from 'react-permissible';
+import { Permissible } from '@brainhubeu/react-permissible';
 
 ...
 
