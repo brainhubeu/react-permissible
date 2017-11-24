@@ -1,5 +1,7 @@
 # react-permissible
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/brainhubeu/react-permissible.svg)](https://greenkeeper.io/)
+
 > Making the permission management for React components easier.
 
 [![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
