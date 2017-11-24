@@ -3,6 +3,7 @@
 > Making the permission management for React components easier.
 
 [![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
+[![Coverage Status](https://coveralls.io/repos/github/brainhubeu/react-permissible/badge.svg?branch=coveralls)](https://coveralls.io/github/brainhubeu/react-permissible?branch=coveralls)
 
 `react-permissible` is a React Component allowing to:
 * manage visibility of particular components depending on user's permissions
