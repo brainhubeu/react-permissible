@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import intersection from 'lodash/intersection';
-import isSubset from 'is-subset';
+import intersection from 'lodash.intersection';
+import difference from 'lodash.difference';
 
 export function Permissible(
   RestrictedComponent,
@@ -12,7 +12,7 @@ export function Permissible(
 ) {
   const permissionsStatus = oneperm
     ? intersection(userPermissions, requiredPermissions).length
-    : isSubset(userPermissions, requiredPermissions);
+    : (!requiredPermissions.length || difference(requiredPermissions, userPermissions).length === 0);
 
   class PermissibleHOC extends Component {
     static propTypes = {

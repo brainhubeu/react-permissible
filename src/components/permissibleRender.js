@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import intersection from 'lodash/intersection';
-import isSubset from 'is-subset';
+import intersection from 'lodash.intersection';
+import difference from 'lodash.difference';
 
 export class PermissibleRender extends Component {
   static propTypes = {
@@ -18,7 +18,8 @@ export class PermissibleRender extends Component {
     if (oneperm) {
       return intersection(userPermissions, requiredPermissions).length;
     }
-    return isSubset(userPermissions, requiredPermissions);
+    return !requiredPermissions.length
+      || difference(requiredPermissions, userPermissions).length === 0;
   }
 
   render() {
