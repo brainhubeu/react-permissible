@@ -88,6 +88,22 @@ describe('PermissibleRender', () => {
     searchedElement.length.should.be.equal(1);
   });
 
+  it('renders a <ChildComponent /> if only required permissions are empty', () => {
+    const props = {
+      userPermissions: ['SOME_PERMISSION'],
+      requiredPermissions: [],
+    };
+
+    const mountedComponent = mount(
+      <PermissibleRender {...props}>
+        <ChildComponent />
+      </PermissibleRender>
+    );
+
+    const searchedElement = mountedComponent.find('ChildComponent');
+    searchedElement.length.should.be.equal(1);
+  });
+
   it('doesn\'t render a <ChildComponent /> if there is a permission mismatch', () => {
     const props = {
       userPermissions: ['REQUIRED_PERMISSION'],
