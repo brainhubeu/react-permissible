@@ -34,6 +34,25 @@ describe('Permissible HOC', () => {
     done(err);
   });
 
+  it.only('doesn\'t run a callback function if `requiredPermissions` and `userPermissions` are both empty', done => {
+    let err = null;
+
+    const AccessibleRoute = Permissible(
+      () => <AccessedComponent />,
+      [],
+      [],
+      () => {
+        err = new Error('Callback function called.');
+      }
+    );
+
+    shallow(
+      <AccessibleRoute />
+    );
+
+    done(err);
+  });
+
   it('runs a callback function if the permissions don\'t match', done => {
     const AccessibleRoute = Permissible(
       () => <AccessedComponent />,
