@@ -18,15 +18,19 @@ export class PermissibleRender extends Component {
     if (oneperm) {
       return intersection(userPermissions, requiredPermissions).length;
     }
-    return !requiredPermissions.length
-      || difference(requiredPermissions, userPermissions).length === 0;
+
+    return difference(requiredPermissions, userPermissions).length === 0;
   }
 
   render() {
-    const { renderOtherwise } = this.props;
+    const { children, userPermissions, requiredPermissions, renderOtherwise } = this.props;
+
+    if (!children || !userPermissions || !requiredPermissions) {
+      return null;
+    }
 
     if (this.checkPermissions()) {
-      return this.props.children;
+      return children;
     } else if (renderOtherwise) {
       return renderOtherwise;
     }
