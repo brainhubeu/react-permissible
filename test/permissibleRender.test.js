@@ -170,7 +170,7 @@ describe('PermissibleRender', () => {
     searchedElement.length.should.be.greaterThan(0);
   });
 
-  it('doesn\'t render a component if the user doesn\'t have all of necessary permissions when `oneperm` prop is explicitely set to false', () => {
+  it('doesn\'t render a component if the user doesn\'t have all of necessary permissions when `oneperm` prop is explicitly set to false', () => {
     const props = {
       userPermissions: ['REQUIRED_PERMISSION'],
       requiredPermissions: ['REQUIRED_PERMISSION', 'ANOTHER_PERMISSION'],
