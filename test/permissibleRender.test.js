@@ -136,7 +136,7 @@ describe('PermissibleRender', () => {
     searchedElement.length.should.be.greaterThan(0);
   });
 
-  it('renders a NotAllowedCOmponent if the user doesn\'t have required permissions and renderOtherwise is given', () => {
+  it('renders a <NotAllowedComponent /> if the user doesn\'t have required permissions and renderOtherwise is given', () => {
     const props = {
       userPermissions: ['REQUIRED_PERMISSION'],
       requiredPermissions: ['NOT_REQUIRED_PERMISSION'],
@@ -153,7 +153,7 @@ describe('PermissibleRender', () => {
     searchedElement.length.should.be.greaterThan(0);
   });
 
-  it('renders a component if the user has one of necessary conditions when `oneperm` prop is defined', () => {
+  it('renders a <ChildComponent /> if the user has one of necessary conditions when `oneperm` prop is defined', () => {
     const props = {
       userPermissions: ['ANOTHER_PERMISSION'],
       requiredPermissions: ['REQUIRED_PERMISSION', 'ANOTHER_PERMISSION'],
@@ -170,7 +170,7 @@ describe('PermissibleRender', () => {
     searchedElement.length.should.be.greaterThan(0);
   });
 
-  it('doesn\'t render a component if the user doesn\'t have all of necessary permissions when `oneperm` prop is explicitly set to false', () => {
+  it('doesn\'t render a <ChildComponent /> if the user doesn\'t have all of necessary permissions when `oneperm` prop is explicitly set to false', () => {
     const props = {
       userPermissions: ['REQUIRED_PERMISSION'],
       requiredPermissions: ['REQUIRED_PERMISSION', 'ANOTHER_PERMISSION'],
