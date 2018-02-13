@@ -12,7 +12,7 @@ export function Permissible(
 ) {
   const permissionsStatus = oneperm
     ? intersection(userPermissions, requiredPermissions).length
-    : (!requiredPermissions.length || difference(requiredPermissions, userPermissions).length === 0);
+    : difference(requiredPermissions, userPermissions).length === 0;
 
   class PermissibleHOC extends Component {
     static propTypes = {
