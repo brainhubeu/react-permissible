@@ -1,0 +1,34 @@
+- title: Home
+  dir: ./src
+  url: /
+  file: pages/landing.js
+
+- title: Docs
+  dir: ../docs
+  url: docs
+  sidemenu:
+    - title: Getting Started
+      dir: getting-started
+      items:
+        - title: Overview
+          file: overview.md
+        - title: Installation
+          file: installation.md
+    - title: Usage
+      dir: usage
+      items:
+        - title: As an ordinary component
+          file: basic.md
+        - title: As Higher Order Component
+          file: hoc.md
+    - title: Examples
+      dir: examples
+      items:
+        - title: Render component when all the permissions match
+          file: permissionsMatch.md
+        - title: Render component when one of the permissions match
+          file: oneMatch.md
+        - title: Render another component if the permissions do not match
+          file: renderOtherwise.md
+        - title: Callback function
+          file: callback.md
