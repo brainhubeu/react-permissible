@@ -1,8 +1,6 @@
 # Callback function
 
-**react-permissible** allows to run a callback function whenever the conditions are not met. 
-
-
+Callback function passed to `Permissible` Higher Order Component will be called whenever the permissions do not match. This might be combined with `oneperm` parameter. **Open the Console** to see a callback message. 
 
 ```javascript
 import { Permissible } from '@brainhubeu/react-permissible';

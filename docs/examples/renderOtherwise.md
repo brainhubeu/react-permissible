@@ -4,9 +4,9 @@ If permissions in the `userPermissions` do not match the `requiredPermissions`, 
 
 ```jsx render
 <PermissibleRender
-    userPermissions={['ACCESS_DASHBOARD']}
-    requiredPermissions={['ACCESS_ADMIN']}
-    renderOtherwise={<AccessDenied/>}
+  userPermissions={['ACCESS_DASHBOARD']}
+  requiredPermissions={['ACCESS_ADMIN']}
+  renderOtherwise={<AccessDenied/>}
 >
   <AccessGranted/>
 </PermissibleRender>
