@@ -34,7 +34,4 @@ Where:
 * `RestrictedComponent`: a component to render
 * `userPermissions`: an array of permissions set for current user
 * `requiredPermissions`: an array of required permissions
-There are also optional props available:
-
-* `oneperm`: boolean determining that only one of required permissions will be necessary instead of requiring all passed permissions (default)
-* `renderOtherwise`: another component to be rendered if the permissions do not match (the user isn't permitted).
+* `oneperm`: boolean determining that only one of required permissions will be necessary instead of requiring all passed permissions (optional)
