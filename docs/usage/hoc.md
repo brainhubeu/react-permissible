@@ -1,6 +1,7 @@
 # Usage
 
-You can use react-permissible in two ways. As an ordinary component and as a Higher Order Component. Both approaches allow you to solve the permission-based rendering a little bit differently.
+You can use react-permissible in two ways: as an ordinary component or as a Higher Order Component. Each approach allows you to solve the permission-based rendering a little bit differently.
+
 
 ## Usage as a Higher Order Component:
 ```javascript
