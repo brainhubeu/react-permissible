@@ -1,6 +1,6 @@
 # Installation
 
-**react-permissible** is designed as an npm package. Installation is as simple as every package there:  
+**react-permissible** is designed as an npm package. Installation is as simple as with every package out there:  
 
 `npm i @brainhubeu/react-permissible`
 

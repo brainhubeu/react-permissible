@@ -1,11 +1,9 @@
 # Callback function
 
-Callback function passed to `Permissible` Higher Order Component will be called whenever the permissions do not match. This might be combined with `oneperm` parameter. **Open the Console** to see a callback message. 
+Callback function passed to a `Permissible` Higher Order Component will be called whenever the permissions do not match. This might be combined with the `oneperm` parameter. **Open the Console** to see a callback message. 
 
 ```javascript
 import { Permissible } from '@brainhubeu/react-permissible';
-
-...
 
 const callbackFunction = ({ userPermissions, requiredPermissions }) => {
   console.log(`
