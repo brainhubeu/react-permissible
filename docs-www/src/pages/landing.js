@@ -6,14 +6,11 @@ import styles from './landing.module.scss';
 const LandingPage = () => (
   <div className={styles.landing}>
     <div>
-      <h1 className={styles.landing__header}>Gatsby Docs Kit</h1>
-      <p className={styles.landing__subheader}>Easy to Maintain Markdown / React Static Documentation Websites</p>
+      <h1 className={styles.landing__header}>react-permissible</h1>
+      <p className={styles.landing__subheader}>Making the permission management for components easier.</p>
       <div className={styles.btn__wrapper}>
-        <Link to="/docs" className={styles.landing__btn}>
+        <Link to="/docs/getting-started/overview" className={styles.landing__btn}>
           <span>Get started!</span>
-        </Link>
-        <Link to="/tutorial" className={styles['landing__btn--alt']}>
-          <span>Take the Tutorial</span>
         </Link>
       </div>
     </div>
