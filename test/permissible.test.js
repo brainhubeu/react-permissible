@@ -5,7 +5,7 @@ import chaiEnzyme from 'chai-enzyme';
 import { JSDOM } from 'jsdom';
 
 import { Permissible } from '../src/components/permissible';
-import AccessedComponent from '../example/components/accessibleComponent.component';
+import AccessedComponent from './accessible.component';
 
 const { document } = (new JSDOM('')).window;
 global.document = document;
@@ -22,6 +22,44 @@ describe('Permissible HOC', () => {
       () => <AccessedComponent />,
       ['MATCHING_PERMISSIONS'],
       ['MATCHING_PERMISSIONS'],
+      () => {
+        err = new Error('Callback function called.');
+      }
+    );
+
+    shallow(
+      <AccessibleRoute />
+    );
+
+    done(err);
+  });
+
+  it('doesn\'t run a callback function if `requiredPermissions` and `userPermissions` are both empty', done => {
+    let err = null;
+
+    const AccessibleRoute = Permissible(
+      () => <AccessedComponent />,
+      [],
+      [],
+      () => {
+        err = new Error('Callback function called.');
+      }
+    );
+
+    shallow(
+      <AccessibleRoute />
+    );
+
+    done(err);
+  });
+
+  it('doesn\'t run a callback function if only `requiredPermissions` are empty', done => {
+    let err = null;
+
+    const AccessibleRoute = Permissible(
+      () => <AccessedComponent />,
+      ['SOME_PERMISSION'],
+      [],
       () => {
         err = new Error('Callback function called.');
       }
