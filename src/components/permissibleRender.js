@@ -10,7 +10,7 @@ export class PermissibleRender extends Component {
     requiredPermissions: PropTypes.arrayOf(PropTypes.string).isRequired,
     children: PropTypes.element.isRequired,
     renderOtherwise: PropTypes.element,
-  }
+  };
 
   checkPermissions() {
     const { userPermissions, requiredPermissions, oneperm } = this.props;

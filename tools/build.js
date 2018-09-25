@@ -1,9 +1,18 @@
 // More info on Webpack's Node API here: https://webpack.github.io/docs/node.js-api.html
 // Allowing console calls below since this is a build file.
 /* eslint-disable no-console */
+const chalk = require('chalk');
 const webpack = require('webpack');
 const config = require('../webpack.config.prod');
-const { chalkError, chalkSuccess, chalkWarning, chalkProcessing } = require('./chalkConfig');
+
+const chalkConfig = {
+  chalkError: chalk.red,
+  chalkSuccess: chalk.green,
+  chalkWarning: chalk.yellow,
+  chalkProcessing: chalk.blue,
+};
+
+const { chalkError, chalkSuccess, chalkWarning, chalkProcessing } = chalkConfig;
 
 process.env.NODE_ENV = 'production'; // this assures React is built in prod mode and that the Babel dev config doesn't apply.
 

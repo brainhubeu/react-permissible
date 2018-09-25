@@ -64,9 +64,7 @@ describe('PermissibleRender', () => {
     };
 
     const mountedComponent = mount(
-      <PermissibleRender {...props}>
-
-      </PermissibleRender>
+      <PermissibleRender {...props} />
     );
 
     should.not.exist(mountedComponent.find('PermissibleRender').html());
