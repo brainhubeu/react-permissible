@@ -72,6 +72,16 @@ jobs:
       - run:
           name: Compile
           command: npm run build
+  publish_package:
+    docker:
+      - image: circleci/node:8.11
+    steps:
+      - checkout
+      - run:
+          name: npm publish
+          command: |
+            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+            npm publish
 workflows:
   version: 2
   build_and_test:
@@ -86,3 +96,12 @@ workflows:
       - compile:
           requires:
             - build
+      - publish_package:
+          requires:
+            - test
+            - lint
+            - compile
+          filters:
+            branches:
+              only:
+                - master
