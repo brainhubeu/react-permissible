@@ -5,7 +5,7 @@ import chaiEnzyme from 'chai-enzyme';
 import { JSDOM } from 'jsdom';
 
 import { Permissible } from '../src/components/permissible';
-import AccessedComponent from '../example/components/accessibleComponent.component';
+import AccessedComponent from './accessible.component';
 
 const { document } = (new JSDOM('')).window;
 global.document = document;

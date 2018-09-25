@@ -20,7 +20,9 @@ export function Permissible(
       history: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     };
 
-    componentWillMount() {
+    constructor(props) {
+      super(props);
+
       if (!permissionsStatus) {
         this.runCallback();
       }
