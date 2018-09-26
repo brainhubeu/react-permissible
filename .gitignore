@@ -42,4 +42,3 @@ node_modules
 # Debug files
 selenium-debug.log
 .npm.debug
-package-lock.json
