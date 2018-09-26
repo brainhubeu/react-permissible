@@ -8,13 +8,13 @@
 [![npm](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
 
 `react-permissible` is a React Component allowing to:
-* manage visibility of particular components depending on user's permissions
-* replacing particular component when the user isn't permitted to see it
-* manage accessability to particular view depending on user's permissions
-* firing a callback when the user isn't allowed to go to access the component/route
+* manage visibility of particular components depending on users permissions
+* replace particular component when the user isn't permitted to see it
+* manage accessability to particular view depending on users permissions
+* fire a callback when the user isn't allowed to go to access the component/route
 
 ## Why?
-Currently there's no permission management in React, the existing components are either over-engineered (full ACL support etc.), or limited to role-based management. `react-permissible` is simple at it's core and solves only one problem - accessing the Component if the necessary permissions are met, do something otherwise.
+Currently there's no permission management in React. The existing components are either over-engineered (full ACL support etc.), or limited to role-based management. `react-permissible` is simple at its core and solves only one problem. Access the Component if the permissions match, do something otherwise.
 
 ## Installation
 ```
@@ -59,7 +59,7 @@ React-permissible is copyright © 2014-2018 [Brainhub](https://brainhub.eu/) It 
 
 ## About
 
-`react-permissible` is maintained by [@kkoscielniak](https://github.com/kkoscielniak) & [@adam-golab](https://github.com/adam-golab) & [@Lukasz-pluszczewski](https://github.com/Lukasz-pluszczewski/) and the Brainhub development team. It is funded by Brainhub and the names and logos for Brainhub are trademarks of Brainhub Sp. z o.o.. You can check other open-source projects supported/developed by our teammates [here](https://brainhub.eu/?utm_source=github). 
+`react-permissible` is maintained by [@kkoscielniak](https://github.com/kkoscielniak), [@adam-golab](https://github.com/adam-golab), [@Lukasz-pluszczewski](https://github.com/Lukasz-pluszczewski/) and the Brainhub development team. It is funded by Brainhub and the names and logos for Brainhub are trademarks of Brainhub Sp. z o.o.. You can check other open-source projects supported/developed by our teammates [here](https://brainhub.eu/?utm_source=github). 
 
 [![Brainhub](https://brainhub.eu/brainhub.svg)](https://brainhub.eu/?utm_source=github)
 
