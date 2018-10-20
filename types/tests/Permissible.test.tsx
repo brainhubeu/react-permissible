@@ -10,13 +10,13 @@ function callbackFunction({ userPermissions, requiredPermissions, }: UserAndRequ
   `)
 }
 
-const AccessGranted = () => <>AccessGranted</>
+const AccessGranted = ({ message, }: { message: string, }) => <>AccessGranted {message}</>
 
-const CallbackComponent = Permissible(
+const RestrictedComponentWithCallback = Permissible(
   AccessGranted,
   ['ACCESS_DASHBOARD'], // userPermissions
   ['ACCESS_ADMIN'], // requiredPermissions
   callbackFunction,
 );
 
-render(<CallbackComponent />, document.createElement('div'))
+render(<RestrictedComponentWithCallback {...{ message: 'test', }} />, document.createElement('div'))

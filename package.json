@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=4"
@@ -10,10 +10,10 @@
     "clean-dist": "rm -rf ./lib && mkdir lib",
     "prebuild": "npm run clean-dist",
     "build": "node tools/build.js",
-    "test": "mocha tools/testSetup.js \"./test/**/*.js\"",
+    "test": "mocha tools/testSetup.js \"./test/**/*.js\" && npm run test:typescript",
     "test:coverage": "NODE_PATH=example babel-node ./node_modules/.bin/isparta cover _mocha -- --require ./tools/testSetup.js \"./test/**/*.js\" && open coverage/lcov-report/index.html",
     "test:coverage:ci": "NODE_PATH=example babel-node ./node_modules/.bin/isparta cover _mocha --report lcovonly -- --require ./tools/testSetup.js \"./test/**/*.js\"",
-    "test:typescript": "cd ./types/tests && npm install-test",
+    "test:typescript": "cd ./types/tests && npm install-test --no-audit",
     "precommit": "npm run lint"
   },
   "author": "Krystian Kościelniak",
@@ -23,8 +23,6 @@
     "lodash.intersection": "^4.4.0"
   },
   "devDependencies": {
-    "@types/react": "16.4.16",
-    "@types/react-dom": "^16.0.9",
     "autoprefixer": "^7.1.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
@@ -67,7 +65,14 @@
     "react": ">0.14.0 || >15.0.0",
     "react-dom": ">0.14.0 || >15.0.0"
   },
-  "keywords": [],
+  "keywords": [
+    "permissions",
+    "access control",
+    "restricted",
+    "HOC",
+    "react",
+    "component"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/brainhubeu/react-permissible"
