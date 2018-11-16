@@ -64,7 +64,19 @@
     "react": ">0.14.0 || >15.0.0",
     "react-dom": ">0.14.0 || >15.0.0"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-permissions",
+    "permissions",
+    "permission-manager",
+    "props",
+    "callback",
+    "users",
+    "authentication",
+    "optional-props",
+    "authorization",
+    "access-control"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/brainhubeu/react-permissible"
