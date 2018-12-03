@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.7.0",
+  "version": "1.6.4",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=4"
@@ -66,12 +66,17 @@
     "react-dom": ">0.14.0 || >15.0.0"
   },
   "keywords": [
-    "permissions",
-    "access control",
-    "restricted",
-    "HOC",
     "react",
-    "component"
+    "react-permissions",
+    "permissions",
+    "permission-manager",
+    "props",
+    "callback",
+    "users",
+    "authentication",
+    "optional-props",
+    "authorization",
+    "access-control"
   ],
   "repository": {
     "type": "git",
