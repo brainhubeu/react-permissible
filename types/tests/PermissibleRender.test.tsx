@@ -1,6 +1,7 @@
-import * as React from 'react'
-import { render, } from 'react-dom'
-import { PermissibleRender, PermissibleRenderProps, } from '@brainhubeu/react-permissible'
+import * as React from 'react';
+import { render } from 'react-dom';
+// eslint-disable-next-line import/no-unresolved, /* this is what we're testing */
+import { PermissibleRender, PermissibleRenderProps } from '@brainhubeu/react-permissible';
 
 const permissibleRenderTestProps: PermissibleRenderProps = {
   oneperm: false,
@@ -8,6 +9,6 @@ const permissibleRenderTestProps: PermissibleRenderProps = {
   userPermissions: ['view'],
   requiredPermissions: ['view'],
   renderOtherwise: 'ACCESS DENIED',
-}
+};
 
-render(<PermissibleRender {...permissibleRenderTestProps} />, document.createElement('div'))
+render(<PermissibleRender {...permissibleRenderTestProps} />, document.createElement('div'));

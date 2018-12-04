@@ -1,0 +1,11 @@
+{
+  "parser": "typescript-eslint-parser",
+  "plugins": ["eslint-plugin-typescript"],
+  "extends": "../.eslintrc",
+  "rules": {
+    "comma-dangle":"off",
+    "no-unused-vars": "off",
+    "import/no-namespace": "off",
+    "typescript/no-unused-vars": "error"
+  }
+}

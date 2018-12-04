@@ -1,16 +1,18 @@
-import * as React from 'react'
-import { render, } from 'react-dom'
-import { Permissible, UserAndRequiredPermissions, } from '@brainhubeu/react-permissible'
+import * as React from 'react';
+import { render } from 'react-dom';
+// eslint-disable-next-line import/no-unresolved, /* this is what we're testing */
+import { Permissible, UserAndRequiredPermissions } from '@brainhubeu/react-permissible';
 
-function callbackFunction({ userPermissions, requiredPermissions, }: UserAndRequiredPermissions){
-  console.log(`
+function callbackFunction({ userPermissions, requiredPermissions }: UserAndRequiredPermissions) {
+  // eslint-disable-next-line no-console
+  console.info(`
     react-permissible: Access Denied
     userPermissions: ${userPermissions}
     requiredPermissions: ${requiredPermissions}
-  `)
+  `);
 }
 
-const AccessGranted = ({ message, }: { message: string, }) => <>AccessGranted {message}</>
+const AccessGranted = ({ message }: { message: string, }) => <>AccessGranted {message}</>;
 
 const RestrictedComponentWithCallback = Permissible(
   AccessGranted,
@@ -19,4 +21,4 @@ const RestrictedComponentWithCallback = Permissible(
   callbackFunction,
 );
 
-render(<RestrictedComponentWithCallback {...{ message: 'test', }} />, document.createElement('div'))
+render(<RestrictedComponentWithCallback {...{ message: 'test' }} />, document.createElement('div'));
