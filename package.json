@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "esw webpack.config.* src tools test --color",
-    "lint:types": "esw types --ext ts,tsx --color --format codeframe --config ./types/.eslintrc",
+    "lint:types": "esw 'types/*.{ts,tsx}' 'types/tests/*.{ts,tsx}' --ext ts,tsx --color --format codeframe --config ./types/.eslintrc",
     "lint:types:watch": "npm run --silent lint:types -- --watch",
     "lint:types:fix": "npm run --silent lint:types -- --fix",
     "clean-dist": "rm -rf ./lib && mkdir lib",
@@ -17,7 +17,7 @@
     "test:coverage": "NODE_PATH=example babel-node ./node_modules/.bin/isparta cover _mocha -- --require ./tools/testSetup.js \"./test/**/*.js\" && open coverage/lcov-report/index.html",
     "test:coverage:ci": "NODE_PATH=example babel-node ./node_modules/.bin/isparta cover _mocha --report lcovonly -- --require ./tools/testSetup.js \"./test/**/*.js\"",
     "test:typescript": "cd ./types/tests && npm install-test --no-audit",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint && npm run lint:types"
   },
   "author": "Krystian Kościelniak",
   "license": "MIT",
@@ -65,7 +65,7 @@
     "sinon": "^2.3.6",
     "sinon-chai": "^2.11.0",
     "typescript": "^3.2.1",
-    "typescript-eslint-parser": "^21.0.1",
+    "typescript-eslint-parser": "^21.0.2",
     "webpack": "^3.0.0"
   },
   "peerDependencies": {

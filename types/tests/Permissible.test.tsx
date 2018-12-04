@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-// eslint-disable-next-line import/no-unresolved, /* this is what we're testing */
+// eslint-disable-next-line import/no-unresolved, import/no-extraneous-dependencies, /* this is what we're testing */
 import { Permissible, UserAndRequiredPermissions } from '@brainhubeu/react-permissible';
 
 function callbackFunction({ userPermissions, requiredPermissions }: UserAndRequiredPermissions) {
