@@ -1,7 +1,6 @@
 import { Component, ComponentState, ComponentType, ReactNode, ReactNodeArray, StaticLifecycle, ValidationMap, } from 'react';
 
 declare module '@brainhubeu/react-permissible' {
-
   type Permissions = string[];
 
   type Children = ReactNode | ReactNodeArray;
