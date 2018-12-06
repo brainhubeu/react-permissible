@@ -1,19 +1,23 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=4"
   },
   "scripts": {
-    "lint": "esw webpack.config.* src tools test features --color",
+    "lint": "esw webpack.config.* src tools test --color",
+    "lint:types": "esw 'types/*.{ts,tsx}' 'types/tests/*.{ts,tsx}' --ext ts,tsx --color --format codeframe --config ./types/.eslintrc",
+    "lint:types:watch": "npm run --silent lint:types -- --watch",
+    "lint:types:fix": "npm run --silent lint:types -- --fix",
     "clean-dist": "rm -rf ./lib && mkdir lib",
     "prebuild": "npm run clean-dist",
     "build": "node tools/build.js",
-    "test": "mocha tools/testSetup.js \"./test/**/*.js\"",
+    "test": "mocha tools/testSetup.js \"./test/**/*.js\" && npm run test:typescript",
     "test:coverage": "NODE_PATH=example babel-node ./node_modules/.bin/isparta cover _mocha -- --require ./tools/testSetup.js \"./test/**/*.js\" && open coverage/lcov-report/index.html",
     "test:coverage:ci": "NODE_PATH=example babel-node ./node_modules/.bin/isparta cover _mocha --report lcovonly -- --require ./tools/testSetup.js \"./test/**/*.js\"",
-    "precommit": "npm run lint"
+    "test:typescript": "cd ./types/tests && npm install-test --no-audit",
+    "precommit": "npm run lint && npm run lint:types"
   },
   "author": "Krystian Kościelniak",
   "license": "MIT",
@@ -38,26 +42,30 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-register": "^6.24.1",
-    "chai": "^4.0.2",
-    "chai-as-promised": "^7.1.0",
-    "chai-enzyme": "^0.8.0",
-    "chalk": "^2.0.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "chalk": "^2.4.1",
     "coveralls": "^3.0.2",
-    "enzyme": "^2.9.1",
-    "eslint": "^4.1.1",
-    "eslint-config-brainhub": "^1.6.3",
-    "eslint-watch": "^3.1.2",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-brainhub": "^1.9.2",
+    "eslint-plugin-typescript": "^0.14.0",
+    "eslint-watch": "^4.0.2",
     "html-webpack-plugin": "^2.29.0",
     "husky": "^1.0.0-rc.15",
     "isparta": "^4.0.0",
     "jsdom": "^11.2.0",
     "mocha": "^3.4.2",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.2",
-    "react-test-renderer": "^16.5.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-test-renderer": "^16.6.3",
     "sinon": "^2.3.6",
     "sinon-chai": "^2.11.0",
+    "typescript": "^3.2.1",
+    "typescript-eslint-parser": "^21.0.2",
     "webpack": "^3.0.0"
   },
   "peerDependencies": {
@@ -81,5 +89,6 @@
     "type": "git",
     "url": "https://github.com/brainhubeu/react-permissible"
   },
-  "main": "./lib/react-permissible.js"
+  "main": "./lib/react-permissible.js",
+  "types": "./types/react-permissible.d.ts"
 }

@@ -1,0 +1,27 @@
+{
+  "name": "react-permissible-typescript-tests",
+  "version": "1.0.0",
+  "description": "Test publishing the typings of react-permissible package",
+  "scripts": {
+    "clean:packed-package": "rm ./brainhubeu-react-permissible-*.tgz",
+    "clean:node-modules": "rm -rf ./node_modules/",
+    "preinstall": "npm run clean:packed-package && npm run clean:node-modules",
+    "pack-parent-package-get-filename": "npm pack ../.. | grep \\.tgz",
+    "postinstall": "npm install --no-save --no-audit `npm run --silent pack-parent-package-get-filename`",
+    "test": "tsc --project .",
+    "posttest": "echo 'TypeScript typings successfuly compiled!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brainhubeu/react-permissible"
+  },
+  "author": "Nick Ribal <elektronik2k5@gmail.com> (https://about.me/nickribal)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.7.11",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "typescript": "^3.2.1"
+  }
+}
