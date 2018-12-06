@@ -2,16 +2,22 @@ process.env.NODE_ENV = 'test';
 
 // Disable webpack-specific features for tests since
 // Mocha doesn't know what to do with them.
+/* istanbul ignore next */
 ['.css', '.scss', '.png', '.jpg'].forEach(ext => {
   require.extensions[ext] = () => null;
 });
 
 // add required globals
 /* eslint-disable no-empty-function */
+/* istanbul ignore next */
 global.logger = function() {};
+/* istanbul ignore next */
 global.logger.info = function() {};
+/* istanbul ignore next */
 global.logger.apiSuccess = function() {};
+/* istanbul ignore next */
 global.logger.apiError = function() {};
+/* istanbul ignore next */
 global.logger.warn = function() {};
 /* eslint-enable */
 
