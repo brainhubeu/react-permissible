@@ -28,9 +28,9 @@
     react-helmet "^5.2.0"
     react-live "^1.10.1"
 
-"@brainhubeu/react-permissible@^1.6.7":
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.6.7.tgz#c527c7774e51f8a1f4b0d80f8809538f11219b73"
+"@brainhubeu/react-permissible@^1.6.8":
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.6.8.tgz#d2da77c14db6357b8ed666891ac6a4bf0b3e7d67"
   dependencies:
     lodash.difference "^4.5.0"
     lodash.intersection "^4.4.0"
