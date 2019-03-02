@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.6.8",
+  "version": "1.6.9",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=4"
@@ -50,7 +50,7 @@
     "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.0",
     "eslint-config-brainhub": "^1.10.0",
     "eslint-plugin-typescript": "^0.14.0",
     "eslint-watch": "^4.0.2",
