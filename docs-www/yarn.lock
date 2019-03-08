@@ -28,10 +28,10 @@
     react-helmet "^5.2.0"
     react-live "^1.10.1"
 
-"@brainhubeu/react-permissible@^1.6.9":
-  version "1.6.9"
-  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.6.9.tgz#10348ce622f6485c48c01f474c1fdbb7f17d807c"
-  integrity sha512-l/3X/fanF6fBB/6vQKvbE30YijQ3yNsyKLPfDHk7FmTmI3OPzeOymy5ghJ3gq3jU9oB5kFyDkGqfA+kri4frAw==
+"@brainhubeu/react-permissible@^1.6.10":
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.6.10.tgz#5f8bf78f59209c3b33d2cd61cd9df4fc9f81ab76"
+  integrity sha512-VdNKCUT6WKZbWOB6HRHnzscv20Pe+o8mHG2iVk32JxgPtC6xierf3vowTMVXD12iZ2bDGgaGyBOMIexdb2Tp1Q==
   dependencies:
     lodash.difference "^4.5.0"
     lodash.intersection "^4.4.0"
