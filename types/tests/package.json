@@ -1,6 +1,6 @@
 {
   "name": "react-permissible-typescript-tests",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Test publishing the typings of react-permissible package",
   "scripts": {
     "clean:packed-package": "rm ./brainhubeu-react-permissible-*.tgz",
@@ -19,9 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "@types/react": "^16.8.8",
-    "@types/react-dom": "^16.8.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "typescript": "^3.3.3333"
+    "@types/react-dom": "^16.8.3",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "typescript": "^3.3.4000"
   }
 }
