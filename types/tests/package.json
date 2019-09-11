@@ -1,6 +1,6 @@
 {
   "name": "react-permissible-typescript-tests",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Test publishing the typings of react-permissible package",
   "scripts": {
     "clean:packed-package": "rm ./brainhubeu-react-permissible-*.tgz",
@@ -22,6 +22,6 @@
     "@types/react-dom": "^16.9.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.3"
   }
 }

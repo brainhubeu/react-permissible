@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.6.20",
+  "version": "1.6.21",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=4"
@@ -65,7 +65,7 @@
     "react-test-renderer": "^16.9.0",
     "sinon": "^2.4.1",
     "sinon-chai": "^2.14.0",
-    "typescript": "^3.6.2",
+    "typescript": "^3.6.3",
     "typescript-eslint-parser": "^21.0.2",
     "webpack": "^3.12.0"
   },
