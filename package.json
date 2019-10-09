@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.6.24",
+  "version": "1.6.25",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=4"
@@ -49,7 +49,7 @@
     "chalk": "^2.4.2",
     "coveralls": "^3.0.6",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-adapter-react-16": "^1.15.0",
     "eslint": "^5.16.0",
     "eslint-config-brainhub": "^1.11.1",
     "eslint-plugin-typescript": "^0.14.0",
@@ -65,7 +65,7 @@
     "react-test-renderer": "^16.10.2",
     "sinon": "^2.4.1",
     "sinon-chai": "^2.14.0",
-    "typescript": "^3.6.3",
+    "typescript": "^3.6.4",
     "typescript-eslint-parser": "^21.0.2",
     "webpack": "^3.12.0"
   },
