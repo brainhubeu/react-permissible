@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@brainhubeu/gatsby-docs-kit": "^1.0.3",
-    "@brainhubeu/react-permissible": "^1.6.27",
+    "@brainhubeu/react-permissible": "^1.6.28",
     "gatsby": "^1.9.279"
   },
   "devDependencies": {
