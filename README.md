@@ -55,7 +55,7 @@ npm test
 
 ## License
 
-React-permissible is copyright © 2014-2018 [Brainhub](https://brainhub.eu/?utm_source=github) It is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+React-permissible is copyright © 2017-2020 [Brainhub](https://brainhub.eu/?utm_source=github) It is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
 
 ## About
 
