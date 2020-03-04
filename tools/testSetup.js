@@ -29,7 +29,6 @@ require('babel-polyfill');
 const chai = require('chai');
 const sinonChai = require('sinon-chai');
 const chaiAsPromised = require('chai-as-promised');
-
 const enzyme = require('enzyme');
 const Adapter = require('enzyme-adapter-react-16');
 
