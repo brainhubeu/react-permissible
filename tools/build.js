@@ -3,6 +3,7 @@
 /* eslint-disable no-console */
 const chalk = require('chalk');
 const webpack = require('webpack');
+
 const config = require('../webpack.config.prod');
 
 const chalkConfig = {
