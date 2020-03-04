@@ -2,37 +2,37 @@
 # yarn lockfile v1
 
 
-"@brainhubeu/gatsby-docs-kit@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@brainhubeu/gatsby-docs-kit/-/gatsby-docs-kit-1.0.8.tgz#e38c237e6e961f75dd180855624c9e52b519ca70"
-  integrity sha512-AWjs9bwlXNPHzyLzgwJIZhbqJOgYjZDoPVAgiobcqYGZPTgYRCfj2OnqhqLvckcQiYwTKIS8ODp7U9vNHPQtug==
+"@brainhubeu/gatsby-docs-kit@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/gatsby-docs-kit/-/gatsby-docs-kit-1.0.10.tgz#86198cc975693571d3886611a040f161ac60948f"
+  integrity sha512-yZrwOe0fedcC0TJD7bf293mdVCjzw0fpCgIlTQEEfg5oaRTs5S0QOzVP0p5nvvz2y0THbPQ0eGPldCeZ6Oey5Q==
   dependencies:
-    classnames "^2.2.6"
-    gatsby-link "^1.6.46"
-    gatsby-plugin-catch-links "^1.0.26"
+    classnames "^2.2.5"
+    gatsby-link "^1.6.40"
+    gatsby-plugin-catch-links "^1.0.22"
     gatsby-plugin-favicon "^2.1.1"
-    gatsby-plugin-meta-redirect "^1.1.1"
-    gatsby-plugin-postcss-sass "^1.0.22"
-    gatsby-plugin-react-helmet "^2.0.11"
+    gatsby-plugin-meta-redirect "^1.1.0"
+    gatsby-plugin-postcss-sass "^1.0.20"
+    gatsby-plugin-react-helmet "^2.0.10"
     gatsby-plugin-react-next "^1.0.11"
-    gatsby-plugin-sharp "^1.6.48"
-    gatsby-remark-autolink-headers "^1.4.19"
-    gatsby-remark-copy-linked-files "^1.5.37"
+    gatsby-plugin-sharp "^1.6.44"
+    gatsby-remark-autolink-headers "^1.4.18"
+    gatsby-remark-copy-linked-files "^1.5.32"
     gatsby-remark-embed-snippet "^1.0.22"
-    gatsby-remark-images "^1.5.67"
-    gatsby-remark-prismjs "^2.0.5"
-    gatsby-source-filesystem "^1.5.39"
-    gatsby-transformer-remark "^1.7.44"
-    gatsby-transformer-yaml "^1.5.18"
-    prismjs "^1.19.0"
-    prop-types "^15.7.2"
-    react-helmet "^5.2.1"
-    react-live "^1.12.0"
+    gatsby-remark-images "^1.5.63"
+    gatsby-remark-prismjs "^2.0.2"
+    gatsby-source-filesystem "^1.5.36"
+    gatsby-transformer-remark "^1.7.41"
+    gatsby-transformer-yaml "^1.5.16"
+    prismjs "^1.14.0"
+    prop-types "^15.6.1"
+    react-helmet "^5.2.0"
+    react-live "^1.10.1"
 
-"@brainhubeu/react-permissible@^1.6.31":
-  version "1.6.31"
-  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.6.31.tgz#49ae55e6be02f14a1d07823114c1821617d35ac4"
-  integrity sha512-/wOjEcYDxHC6PKZs+FkZz9eMYzAyWcmsHn2jZjv8LPcBtrPy3EqtQX/JN7C1lnOSP7Bp9m6Ho+lIdb2+1CJ+1A==
+"@brainhubeu/react-permissible@^1.6.33":
+  version "1.6.33"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.6.33.tgz#ce1d61e2e39183706b41cb696ff0ebbf5815c754"
+  integrity sha512-t+KYqrR5Xnog6QREZnnBw6njNVRnZNIuCo43I8tkJy3H5ODjiLPqeEi0PfhY0QL5/k95Mkwt2h/3ApGXIQE8bA==
   dependencies:
     lodash.difference "^4.5.0"
     lodash.intersection "^4.4.0"
@@ -2000,7 +2000,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6:
+classnames@^2.2.5:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
@@ -4230,9 +4230,10 @@ gatsby-cli@^1.1.58:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-link@^1.6.46:
+gatsby-link@^1.6.40, gatsby-link@^1.6.46:
   version "1.6.46"
   resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.46.tgz#1f9f6bd7a4d448a856c2035e54f2263d7933f4fd"
+  integrity sha1-H59r16TUSKhWwgNeVPImPXkz9P0=
   dependencies:
     "@types/history" "^4.6.2"
     "@types/react-router-dom" "^4.2.2"
@@ -4247,7 +4248,7 @@ gatsby-module-loader@^1.0.11:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
 
-gatsby-plugin-catch-links@^1.0.26:
+gatsby-plugin-catch-links@^1.0.22:
   version "1.0.26"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-1.0.26.tgz#6a190f3ad55a35539ef2839afd9caa51a207f4c1"
   integrity sha512-neznwTlPm6pA1MW4vDm6wyOdQU3iwKKGztI/RtLAQ2ttOVynJmaGh4iaC62ZKCyCTnWcp13Be/ig18pQOhLzLg==
@@ -4262,7 +4263,7 @@ gatsby-plugin-favicon@^2.1.1:
     babel-runtime "^6.26.0"
     favicons-webpack-plugin "0.0.7"
 
-gatsby-plugin-meta-redirect@^1.1.1:
+gatsby-plugin-meta-redirect@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-meta-redirect/-/gatsby-plugin-meta-redirect-1.1.1.tgz#058e8e53edff38dc44d3bb6153109d01c910f863"
   integrity sha512-Oc4qgU3SlDUM9qoxIMKO+re2bdMs3/a2KXrfL65gb8XMLsHylBbveWtXZRhgjd2QDL/49RX4S9SEykuadRju2w==
@@ -4281,7 +4282,7 @@ gatsby-plugin-page-creator@^1.0.1:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-postcss-sass@^1.0.22:
+gatsby-plugin-postcss-sass@^1.0.20:
   version "1.0.22"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss-sass/-/gatsby-plugin-postcss-sass-1.0.22.tgz#73e7d163ca16377ba597d5804eac3cb67a8fa488"
   integrity sha1-c+fRY8oWN3ull9WATqw8tnqPpIg=
@@ -4292,7 +4293,7 @@ gatsby-plugin-postcss-sass@^1.0.22:
     node-sass "^4.5.2"
     sass-loader "^4.1.1"
 
-gatsby-plugin-react-helmet@^2.0.11:
+gatsby-plugin-react-helmet@^2.0.10:
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-2.0.11.tgz#a2db81755f5b41d54e0e535ca1d9a008d3ccff0a"
   integrity sha1-otuBdV9bQdVODlNcodmgCNPM/wo=
@@ -4308,7 +4309,7 @@ gatsby-plugin-react-next@^1.0.11:
     react "^16.0.0"
     react-dom "^16.0.0"
 
-gatsby-plugin-sharp@^1.6.48:
+gatsby-plugin-sharp@^1.6.44, gatsby-plugin-sharp@^1.6.48:
   version "1.6.48"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.6.48.tgz#9bb7515da9c7753b3065c51b2d35a0de5b9aa1f5"
   integrity sha1-m7dRXanHdTswZcUbLTWg3luaofU=
@@ -4335,7 +4336,7 @@ gatsby-react-router-scroll@^1.0.18:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-autolink-headers@^1.4.19:
+gatsby-remark-autolink-headers@^1.4.18:
   version "1.4.19"
   resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-1.4.19.tgz#84417de2fc6fbe9914219999ae0e2616fc9c79a2"
   integrity sha1-hEF94vxvvpkUIZmZrg4mFvyceaI=
@@ -4345,7 +4346,7 @@ gatsby-remark-autolink-headers@^1.4.19:
     mdast-util-to-string "^1.0.2"
     unist-util-visit "^1.1.1"
 
-gatsby-remark-copy-linked-files@^1.5.37:
+gatsby-remark-copy-linked-files@^1.5.32:
   version "1.5.37"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-1.5.37.tgz#cfa2a055e6ba3dbb2fd9bbbd33a1211788bbd49e"
   integrity sha1-z6KgVea6Pbsv2bu9M6EhF4i71J4=
@@ -4369,7 +4370,7 @@ gatsby-remark-embed-snippet@^1.0.22:
     parse-numeric-range "^0.0.2"
     unist-util-map "^1.0.3"
 
-gatsby-remark-images@^1.5.67:
+gatsby-remark-images@^1.5.63:
   version "1.5.67"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.67.tgz#6b0db6873ea1a141d2b3ca211a05ab85c55922e2"
   integrity sha1-aw22hz6hoUHSs8ohGgWrhcVZIuI=
@@ -4391,7 +4392,7 @@ gatsby-remark-prismjs@^1.2.24:
     prismjs "^1.12.2"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-prismjs@^2.0.5:
+gatsby-remark-prismjs@^2.0.2:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-2.0.5.tgz#fda6c6a19604d153dc1be609465b22f5229c3c6b"
   integrity sha1-/abGoZYE0VPcG+YJRlsi9SKcPGs=
@@ -4400,7 +4401,7 @@ gatsby-remark-prismjs@^2.0.5:
     parse-numeric-range "0.0.2"
     unist-util-visit "^1.3.0"
 
-gatsby-source-filesystem@^1.5.39:
+gatsby-source-filesystem@^1.5.36:
   version "1.5.39"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.5.39.tgz#c7e49b7809632b53c827e66ff3ee0ba74ef62dd8"
   integrity sha1-x+SbeAljK1PIJ+Zv8+4Lp072Ldg=
@@ -4418,7 +4419,7 @@ gatsby-source-filesystem@^1.5.39:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-gatsby-transformer-remark@^1.7.44:
+gatsby-transformer-remark@^1.7.41:
   version "1.7.44"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.44.tgz#69b45f377a68484d1eab13f1feb7924428378ce1"
   integrity sha1-abRfN3poSE0eqxPx/reSRCg3jOE=
@@ -4444,7 +4445,7 @@ gatsby-transformer-remark@^1.7.44:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby-transformer-yaml@^1.5.18:
+gatsby-transformer-yaml@^1.5.16:
   version "1.5.18"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-1.5.18.tgz#b1f64f2a0a8941fb67b6b146bf49b887d3380347"
   integrity sha1-sfZPKgqJQftntrFGv0m4h9M4A0c=
@@ -8651,7 +8652,7 @@ prismjs@^1.12.2:
   optionalDependencies:
     clipboard "^2.0.0"
 
-prismjs@^1.19.0:
+prismjs@^1.14.0:
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.19.0.tgz#713afbd45c3baca4b321569f2df39e17e729d4dc"
   integrity sha512-IVFtbW9mCWm9eOIaEkNyo2Vl4NnEifis2GQ7/MLRG5TQe6t+4Sj9J5QWI9i3v+SS43uZBlCAOn+zYTVYQcPXJw==
@@ -8713,7 +8714,7 @@ prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0,
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8929,15 +8930,15 @@ react-dom@^16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-dom@^16.12.0:
-  version "16.12.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
-  integrity sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw==
+react-dom@^16.13.0:
+  version "16.13.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.0.tgz#cdde54b48eb9e8a0ca1b3dc9943d9bb409b81866"
+  integrity sha512-y09d2c4cG220DzdlFkPTnVvGTszVvNpC73v+AaLGLHbkpy3SSgvYq8x0rNwPJ/Rk/CicTNgk0hbHNw1gMEZAXg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.18.0"
+    scheduler "^0.19.0"
 
 react-error-overlay@^3.0.0:
   version "3.0.0"
@@ -8949,7 +8950,7 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-helmet@^5.2.1:
+react-helmet@^5.2.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.1.tgz#16a7192fdd09951f8e0fe22ffccbf9bb3e591ffa"
   integrity sha512-CnwD822LU8NDBnjCpZ4ySh8L6HYyngViTZLfBBb3NjtrpN8m49clH8hidHouq20I51Y6TpCTISCBbqiY5GamwA==
@@ -8973,7 +8974,7 @@ react-is@^16.8.1:
   version "16.8.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.3.tgz#4ad8b029c2a718fc0cfc746c8d4e1b7221e5387d"
 
-react-live@^1.12.0:
+react-live@^1.10.1:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/react-live/-/react-live-1.12.0.tgz#2876d4e913331002b66dfa73cf58051376bc2518"
   integrity sha512-zFEpY01fJORF0IiyONqvjwPLBBDp155Ive6tU8ZmetmT2p4XWUKHstnlu4Cayia+n7iu58Owytztu43yvSin8g==
@@ -9041,10 +9042,10 @@ react@^16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react@^16.12.0:
-  version "16.12.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
-  integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
+react@^16.13.0:
+  version "16.13.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.13.0.tgz#d046eabcdf64e457bbeed1e792e235e1b9934cf7"
+  integrity sha512-TSavZz2iSLkq5/oiE7gnFzmURKZMltmi193rm5HEoUDAXpzT9Kzw6oNZnGoai/4+fUnm7FqS5dwgUL34TujcWQ==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -9838,10 +9839,10 @@ sc-formatter@~3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/sc-formatter/-/sc-formatter-3.0.2.tgz#9abdb14e71873ce7157714d3002477bbdb33c4e6"
 
-scheduler@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.18.0.tgz#5901ad6659bc1d8f3fdaf36eb7a67b0d6746b1c4"
-  integrity sha512-agTSHR1Nbfi6ulI0kYNK0203joW2Y5W4po4l+v03tOoiJKpTBbxpNhWDvqc/4IcOw+KLmSiQLTasZ4cab2/UWQ==
+scheduler@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.0.tgz#a715d56302de403df742f4a9be11975b32f5698d"
+  integrity sha512-xowbVaTPe9r7y7RUejcK73/j8tt2jfiyTednOvHbA8JoClvMYCp+r8QegLwK/n8zWQAtZb1fFnER4XLBZXrCxA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
