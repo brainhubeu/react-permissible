@@ -1,6 +1,6 @@
 {
   "name": "react-permissible-typescript-tests",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Test publishing the typings of react-permissible package",
   "scripts": {
     "clean:packed-package": "rm ./brainhubeu-react-permissible-*.tgz",
@@ -18,10 +18,10 @@
   "author": "Nick Ribal <elektronik2k5@gmail.com> (https://about.me/nickribal)",
   "license": "MIT",
   "dependencies": {
-    "@types/react": "^16.9.19",
+    "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "typescript": "^3.7.5"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "typescript": "^3.8.3"
   }
 }
