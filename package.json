@@ -3,6 +3,7 @@
   "version": "1.6.37",
   "description": "Permission management component for React",
   "engines": {
+    "node": ">=12",
     "npm": ">=4"
   },
   "scripts": {

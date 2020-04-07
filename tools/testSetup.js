@@ -7,20 +7,6 @@ process.env.NODE_ENV = 'test';
   require.extensions[ext] = () => null;
 });
 
-// add required globals
-/* eslint-disable no-empty-function */
-/* istanbul ignore next */
-global.logger = function() {};
-/* istanbul ignore next */
-global.logger.info = function() {};
-/* istanbul ignore next */
-global.logger.apiSuccess = function() {};
-/* istanbul ignore next */
-global.logger.apiError = function() {};
-/* istanbul ignore next */
-global.logger.warn = function() {};
-/* eslint-enable */
-
 // Register babel so that it will transpile ES6 to ES5
 // before our tests run.
 require('babel-register')();
