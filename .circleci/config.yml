@@ -128,7 +128,7 @@ workflows:
   build_and_test:
     jobs:
       - check_branch_name
-      - build
+      - build:
           requires:
             - check_branch_name
       - test:
