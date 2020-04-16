@@ -4,7 +4,7 @@
 
 [![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
 [![Last commit](https://img.shields.io/github/last-commit/brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/commits/master)
-[![license](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
+[![license](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/blob/master/LICENSE.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
