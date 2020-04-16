@@ -1,9 +1,25 @@
 version: 2
 jobs:
+  check_branch_name:
+    docker:
+      - image: circleci/node:12.16.2
+    working_directory: ~/app
+    steps:
+      - run:
+          name: fail if the branch name does not start with a valid prefix
+          command: |
+            branch=$CIRCLE_BRANCH
+            if [[ "$branch" =~ ^(fix|feature|breaking)/ || "$branch" == 'master' ]]
+            then
+              echo $branch is a valid name
+            else
+              echo $branch is not valid because the branch name must match '^(fix|feature|breaking)/' or be master
+              exit 1
+            fi
   build:
     working_directory: ~/app
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -17,7 +33,7 @@ jobs:
             - node_modules
   test:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -40,7 +56,7 @@ jobs:
           command: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   lint:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -57,7 +73,7 @@ jobs:
           command: npm run lint
   compile:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -74,9 +90,34 @@ jobs:
           command: npm run build
   publish_package:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
+      - run:
+          name: configure GitHub user
+          command: |
+            git config --global user.email "devops@brainhub.pl"
+            git config --global user.name "DevOps Brainhub"
+            git remote -v
+            git remote remove origin
+            git remote add origin https://$GIT_TOKEN@github.com/brainhubeu/react-permissible
+            git remote -v
+      - run:
+          name: bump NPM version
+          command: |
+            branch=`git log --oneline | grep '[0-9a-f]\{6,40\} Merge pull request #[0-9]\+ from brainhubeu/' | head -1 | sed 's@.* from brainhubeu/@@g' || true`
+            echo branch=$branch
+            if [[ "$branch" =~ ^(fix)/ ]]; then
+              npm version patch -m "%s [ci skip]"
+            elif [[ "$branch" =~ ^(feature)/ ]]; then
+              npm version minor -m "%s [ci skip]"
+            elif [[ "$branch" =~ ^(breaking)/ ]]; then
+              npm version major -m "%s [ci skip]"
+            else
+              echo $branch is not valid because the branch name must match '^(fix|feature|breaking)/'
+              exit 1
+            fi
+      - run: git push origin $CIRCLE_BRANCH
       - run:
           name: npm publish
           command: |
@@ -86,7 +127,10 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build
+      - check_branch_name
+      - build:
+          requires:
+            - check_branch_name
       - test:
           requires:
             - build
