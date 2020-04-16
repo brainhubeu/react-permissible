@@ -2,7 +2,7 @@ version: 2
 jobs:
   check_branch_name:
     docker:
-      - image: circleci/node:12.16.1
+      - image: circleci/node:12.16.2
     working_directory: ~/app
     steps:
       - run:
@@ -19,7 +19,7 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -33,7 +33,7 @@ jobs:
             - node_modules
   test:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -56,7 +56,7 @@ jobs:
           command: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   lint:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -73,7 +73,7 @@ jobs:
           command: npm run lint
   compile:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - restore_cache:
@@ -90,7 +90,7 @@ jobs:
           command: npm run build
   publish_package:
     docker:
-      - image: circleci/node:13.10.1
+      - image: circleci/node:13.13.0
     steps:
       - checkout
       - run:
