@@ -15,7 +15,7 @@ module.exports = {
   },
 
   // URL prefix on production environment. For more info see https://www.gatsbyjs.org/docs/path-prefix/
-  pathPrefix: process.env.PATH_PREFIX || ' ',
+  pathPrefix: process.env.PATH_PREFIX || '',
 
   plugins: [
     ...pluginConfigFactory({
@@ -32,5 +32,6 @@ module.exports = {
         pageTransitionDelay: 0,
         cookieDomain: 'brainhubeu.github.io',
       },
+    },
   ],
 };
