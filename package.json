@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=4"
@@ -22,7 +22,7 @@
   "author": "Krystian Kościelniak",
   "license": "MIT",
   "dependencies": {
-    "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-google-analytics": "^2.3.1",
     "lodash.difference": "^4.5.0",
     "lodash.intersection": "^4.4.0"
   },
@@ -48,7 +48,7 @@
     "chai-as-promised": "^7.1.1",
     "chai-enzyme": "^1.0.0-beta.1",
     "chalk": "^2.4.2",
-    "coveralls": "^3.0.11",
+    "coveralls": "^3.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^5.16.0",
@@ -66,7 +66,7 @@
     "react-test-renderer": "^16.13.1",
     "sinon": "^2.4.1",
     "sinon-chai": "^2.14.0",
-    "typescript": "^3.8.3",
+    "typescript": "^3.9.2",
     "typescript-eslint-parser": "^21.0.2",
     "webpack": "^3.12.0"
   },
