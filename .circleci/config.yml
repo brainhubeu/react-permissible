@@ -117,6 +117,7 @@ jobs:
               echo $branch is not valid because the branch name must match '^(fix|feature|breaking)/'
               exit 1
             fi
+      - run: git pull --no-edit origin $CIRCLE_BRANCH
       - run: git push origin $CIRCLE_BRANCH
       - run:
           name: npm publish
