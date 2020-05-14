@@ -23,6 +23,9 @@
 ## Why?
 Currently there's no permission management in React. The existing components are either over-engineered (full ACL support etc.), or limited to role-based management. `react-permissible` is simple at its core and solves only one problem. Access the Component if the permissions match, do something otherwise.
 
+## Live demo/ docs
+You can access live demo/ docs at https://brainhubeu.github.io/react-permissible/.
+
 ## Installation
 ```
 npm i @brainhubeu/react-permissible
