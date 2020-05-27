@@ -1,6 +1,20 @@
-# react-permissible
+<br/>
+<h1 align="center">
+  react-permissible
+</h1>
 
-> Making the permission management for React components easier.
+<p align="center">
+  Making the permission management for React components easier.
+</p>
+
+<p align="center">
+  <strong>
+    <a href="https://brainhubeu.github.io/react-permissible/">Live code demo</a> | 
+    <a href="https://brainhub.eu/contact/">Hire us</a>
+  </strong>
+</p>
+
+<div align="center">
 
 [![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
 [![Last commit](https://img.shields.io/github/last-commit/brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/commits/master)
@@ -13,6 +27,8 @@
 [![Minified](https://img.shields.io/bundlephobia/min/@brainhubeu/react-permissible?label=minified)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
 [![npm](https://img.shields.io/npm/v/@brainhubeu/react-permissible.svg)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
 [![Contributors](https://img.shields.io/github/contributors/brainhubeu/react-permissible?color=blue)](https://github.com/brainhubeu/react-permissible/graphs/contributors)
+</div>
+
 
 `react-permissible` is a React Component allowing to:
 * manage visibility of particular components depending on users permissions
