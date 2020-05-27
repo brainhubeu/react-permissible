@@ -16,17 +16,17 @@
 
 <div align="center">
 
-[![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
-[![Last commit](https://img.shields.io/github/last-commit/brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/commits/master)
-[![license](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/blob/master/LICENSE.md)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+  [![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
+  [![Last commit](https://img.shields.io/github/last-commit/brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/commits/master)
+  [![license](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/blob/master/LICENSE.md)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+  [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
-[![Coveralls github](https://img.shields.io/coveralls/github/brainhubeu/react-permissible.svg)](https://coveralls.io/github/brainhubeu/react-permissible?branch=master)
-[![Downloads](https://img.shields.io/npm/dm/@brainhubeu/react-permissible?color=blue)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
-[![Minified](https://img.shields.io/bundlephobia/min/@brainhubeu/react-permissible?label=minified)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
-[![npm](https://img.shields.io/npm/v/@brainhubeu/react-permissible.svg)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
-[![Contributors](https://img.shields.io/github/contributors/brainhubeu/react-permissible?color=blue)](https://github.com/brainhubeu/react-permissible/graphs/contributors)
+  [![Coveralls github](https://img.shields.io/coveralls/github/brainhubeu/react-permissible.svg)](https://coveralls.io/github/brainhubeu/react-permissible?branch=master)
+  [![Downloads](https://img.shields.io/npm/dm/@brainhubeu/react-permissible?color=blue)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
+  [![Minified](https://img.shields.io/bundlephobia/min/@brainhubeu/react-permissible?label=minified)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
+  [![npm](https://img.shields.io/npm/v/@brainhubeu/react-permissible.svg)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
+  [![Contributors](https://img.shields.io/github/contributors/brainhubeu/react-permissible?color=blue)](https://github.com/brainhubeu/react-permissible/graphs/contributors)
 </div>
 
 
