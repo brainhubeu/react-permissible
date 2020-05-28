@@ -1,18 +1,34 @@
-# react-permissible
+<br/>
+<h1 align="center">
+  react-permissible
+</h1>
 
-> Making the permission management for React components easier.
+<p align="center">
+  Making the permission management for React components easier.
+</p>
 
-[![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
-[![Last commit](https://img.shields.io/github/last-commit/brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/commits/master)
-[![license](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/blob/master/LICENSE.md)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+<p align="center">
+  <strong>
+    <a href="https://brainhubeu.github.io/react-permissible/">Live code demo</a> | 
+    <a href="https://brainhub.eu/contact/">Hire us</a>
+  </strong>
+</p>
 
-[![Coveralls github](https://img.shields.io/coveralls/github/brainhubeu/react-permissible.svg)](https://coveralls.io/github/brainhubeu/react-permissible?branch=master)
-[![Downloads](https://img.shields.io/npm/dm/@brainhubeu/react-permissible?color=blue)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
-[![Minified](https://img.shields.io/bundlephobia/min/@brainhubeu/react-permissible?label=minified)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
-[![npm](https://img.shields.io/npm/v/@brainhubeu/react-permissible.svg)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
-[![Contributors](https://img.shields.io/github/contributors/brainhubeu/react-permissible?color=blue)](https://github.com/brainhubeu/react-permissible/graphs/contributors)
+<div align="center">
+
+  [![CircleCI](https://circleci.com/gh/brainhubeu/react-permissible.svg?style=svg)](https://circleci.com/gh/brainhubeu/react-permissible)
+  [![Last commit](https://img.shields.io/github/last-commit/brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/commits/master)
+  [![license](https://img.shields.io/npm/l/@brainhubeu/react-permissible.svg)](https://github.com/brainhubeu/react-permissible/blob/master/LICENSE.md)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+  [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+
+  [![Coveralls github](https://img.shields.io/coveralls/github/brainhubeu/react-permissible.svg)](https://coveralls.io/github/brainhubeu/react-permissible?branch=master)
+  [![Downloads](https://img.shields.io/npm/dm/@brainhubeu/react-permissible?color=blue)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
+  [![Minified](https://img.shields.io/bundlephobia/min/@brainhubeu/react-permissible?label=minified)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
+  [![npm](https://img.shields.io/npm/v/@brainhubeu/react-permissible.svg)](https://www.npmjs.com/package/@brainhubeu/react-permissible)
+  [![Contributors](https://img.shields.io/github/contributors/brainhubeu/react-permissible?color=blue)](https://github.com/brainhubeu/react-permissible/graphs/contributors)
+</div>
+
 
 `react-permissible` is a React Component allowing to:
 * manage visibility of particular components depending on users permissions
