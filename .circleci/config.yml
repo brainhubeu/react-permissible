@@ -1,4 +1,10 @@
-version: 2
+version: 2.1
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:12.17.0
+    working_directory: ~/app
+
 jobs:
   check_branch_name:
     docker:
@@ -32,8 +38,7 @@ jobs:
           paths:
             - node_modules
   test:
-    docker:
-      - image: circleci/node:13.14.0
+    executor: node-executor
     steps:
       - checkout
       - restore_cache:
@@ -48,12 +53,12 @@ jobs:
       - run:
           name: Test
           command: npm run test:coverage:ci
-      - run:
-          name: Generate coveralls config
-          command: "echo repo_token: $REPO_TOKEN > ./.coveralls.yml"
-      - run:
-          name: Upload coverage to coveralls
-          command: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - .git
+            - node_modules
+            - coverage
   lint:
     docker:
       - image: circleci/node:13.14.0
@@ -89,10 +94,17 @@ jobs:
           name: Compile
           command: npm run build
   publish_package:
-    docker:
-      - image: circleci/node:13.14.0
+    executor: node-executor
     steps:
-      - checkout
+      - attach_workspace:
+          at: ~/app
+      - run: git checkout .
+      - run:
+          name: Generate coveralls config
+          command: "echo repo_token: $REPO_TOKEN > ./.coveralls.yml"
+      - run:
+          name: Upload coverage to coveralls
+          command: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
       - run:
           name: configure GitHub user
           command: |
