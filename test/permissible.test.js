@@ -25,11 +25,11 @@ describe('Permissible HOC', () => {
       ['MATCHING_PERMISSIONS'],
       () => {
         err = new Error('Callback function called.');
-      }
+      },
     );
 
     shallow(
-      <AccessibleRoute />
+      <AccessibleRoute />,
     );
 
     done(err);
@@ -44,11 +44,11 @@ describe('Permissible HOC', () => {
       [],
       () => {
         err = new Error('Callback function called.');
-      }
+      },
     );
 
     shallow(
-      <AccessibleRoute />
+      <AccessibleRoute />,
     );
 
     done(err);
@@ -63,11 +63,11 @@ describe('Permissible HOC', () => {
       [],
       () => {
         err = new Error('Callback function called.');
-      }
+      },
     );
 
     shallow(
-      <AccessibleRoute />
+      <AccessibleRoute />,
     );
 
     done(err);
@@ -80,11 +80,11 @@ describe('Permissible HOC', () => {
       ['UNMATCHING_PERMISSIONS'],
       () => {
         done();
-      }
+      },
     );
 
     shallow(
-      <AccessibleRoute/>
+      <AccessibleRoute/>,
     );
   });
 
@@ -102,7 +102,7 @@ describe('Permissible HOC', () => {
     );
 
     shallow(
-      <AccessibleRoute />
+      <AccessibleRoute />,
     );
 
     done(err);
@@ -120,7 +120,7 @@ describe('Permissible HOC', () => {
     );
 
     shallow(
-      <AccessibleRoute />
+      <AccessibleRoute />,
     );
   });
 
@@ -134,7 +134,7 @@ describe('Permissible HOC', () => {
     );
 
     shallow(
-      <AccessibleRoute />
+      <AccessibleRoute />,
     );
 
     done();

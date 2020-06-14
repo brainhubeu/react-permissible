@@ -36,7 +36,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -51,7 +51,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -64,7 +64,7 @@ describe('PermissibleRender', () => {
     };
 
     const mountedComponent = mount(
-      <PermissibleRender {...props} />
+      <PermissibleRender {...props} />,
     );
 
     should.not.exist(mountedComponent.find('PermissibleRender').html());
@@ -79,7 +79,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -95,7 +95,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -111,7 +111,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -127,7 +127,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -144,7 +144,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <NotAllowedComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('NotAllowedComponent');
@@ -161,7 +161,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
@@ -178,7 +178,7 @@ describe('PermissibleRender', () => {
     const mountedComponent = mount(
       <PermissibleRender {...props}>
         <ChildComponent />
-      </PermissibleRender>
+      </PermissibleRender>,
     );
 
     const searchedElement = mountedComponent.find('ChildComponent');
