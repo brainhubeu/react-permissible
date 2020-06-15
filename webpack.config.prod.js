@@ -1,6 +1,6 @@
 const path = require('path');
 
-const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   externals: [
@@ -37,11 +37,13 @@ module.exports = {
     path: path.resolve(__dirname, 'lib'),
     umdNamedDefine: true,
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false,
-    }),
-  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        sourceMap: false,
+      }),
+    ],
+  },
   module: {
     rules: [
       {
