@@ -27,6 +27,7 @@
     "lodash.intersection": "^4.4.0"
   },
   "devDependencies": {
+    "@brainhubeu/license-auditor": "^1.0.18",
     "autoprefixer": "^9.8.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -49,6 +50,7 @@
     "chai-enzyme": "^1.0.0-beta.1",
     "chalk": "^4.1.0",
     "coveralls": "^3.1.0",
+    "danger": "^10.2.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^7.2.0",

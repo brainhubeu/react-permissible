@@ -30,9 +30,8 @@ jobs:
       - checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install npm dependencies
-          command: npm install --production=false
+      - run: yarn install --non-interactive
+      - run: yarn danger ci --failOnErrors --id @brainhubeu/react-carousel
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
