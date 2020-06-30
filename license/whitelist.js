@@ -1,10 +1,12 @@
 /* Provide a list of whitelisted licenses for the project below */
 const whitelist = [
+  '(BSD-2-Clause OR WTFPL)',
   '(MIT AND BSD-3-Clause)',
   '(MIT AND CC-BY-3.0)',
   '(MIT AND Zlib)',
   '(MIT OR Apache-2.0)',
   '(MIT OR CC0-1.0)',
+  '(Unlicense OR Apache-2.0)',
   '(WTFPL OR MIT)',
   '0BSD',
   'AFLv2.1',
