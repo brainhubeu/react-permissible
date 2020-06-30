@@ -22,33 +22,14 @@ jobs:
               echo $branch is not valid because the branch name must match '^(dependabot|fix|feature|breaking)/' or be master
               exit 1
             fi
-  build:
-    working_directory: ~/app
-    docker:
-      - image: circleci/node:14.4.0
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run: yarn install --non-interactive
-      - run: yarn danger ci --failOnErrors --id @brainhubeu/react-carousel
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
   test:
     executor: node-executor
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install npm dependencies
-          command: npm install --production=false
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
+      - run: yarn install --non-interactive
+      - run: yarn danger ci --failOnErrors --id @brainhubeu/react-carousel
+      - run: yarn lint
+      - run: yarn build
       - run:
           name: Test
           command: npm run test:coverage:ci
@@ -58,40 +39,6 @@ jobs:
             - .git
             - node_modules
             - coverage
-  lint:
-    docker:
-      - image: circleci/node:14.4.0
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install npm dependencies
-          command: npm install --production=false
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-      - run:
-          name: Lint
-          command: npm run lint
-  compile:
-    docker:
-      - image: circleci/node:14.4.0
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install npm dependencies
-          command: npm install --production=false
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-      - run:
-          name: Compile
-          command: npm run build
   publish_package:
     executor: node-executor
     steps:
@@ -142,23 +89,12 @@ workflows:
   build_and_test:
     jobs:
       - check_branch_name
-      - build:
-          requires:
-            - check_branch_name
       - test:
           requires:
-            - build
-      - lint:
-          requires:
-            - build
-      - compile:
-          requires:
-            - build
+            - check_branch_name
       - publish_package:
           requires:
             - test
-            - lint
-            - compile
           filters:
             branches:
               only:
