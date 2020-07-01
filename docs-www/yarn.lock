@@ -23,7 +23,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/runtime@^7.10.3":
+"@babel/runtime@^7.9.6":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.4.tgz#a6724f1a6b8d2f6ea5236dbfe58c7d7ea9c5eb99"
   integrity sha512-UpTN5yUJr9b4EX2CnGNWIvER7Ab83ibv0pcvvHc4UOdrBI5jb8bj+32cCwPX6xu0mt2daFNjYhoi+X7beH0RSw==
@@ -57,12 +57,12 @@
     react-helmet "^5.2.0"
     react-live "^1.10.1"
 
-"@brainhubeu/react-permissible@^1.9.9":
-  version "1.9.9"
-  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.9.9.tgz#d839da2350ec8a3af391fd63437749f6c2026fa8"
-  integrity sha512-cPrRgmveOljiC39aHuD8xVPWzMsOmicAKTdrrxlt72qId5Y8dXjCA3AcB8uvRg4QwN8UYPsf2+6UoQddC5WtEg==
+"@brainhubeu/react-permissible@^1.9.13":
+  version "1.9.13"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-permissible/-/react-permissible-1.9.13.tgz#e062482847c442a4b9086a53800136455cf989d7"
+  integrity sha512-RANvVyhkBDoTCoWmwsCaJDqW9N2mMGUDIjacSEYtf9kNgiBi9SOECI1/gyCt7Y4rRSRTzM4scyzjLIFAyKZF4A==
   dependencies:
-    gatsby-plugin-google-analytics "^2.3.2"
+    gatsby-plugin-google-analytics "2.3.2"
     lodash.difference "^4.5.0"
     lodash.intersection "^4.4.0"
 
@@ -4431,12 +4431,12 @@ gatsby-plugin-favicon@^2.1.1:
     babel-runtime "^6.26.0"
     favicons-webpack-plugin "0.0.7"
 
-gatsby-plugin-google-analytics@^2.3.2:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.6.tgz#3867732a1ae65a3a00d23217cd131025f33942b4"
-  integrity sha512-hm+PXjl46mtpQ+EBXVcS4YvrewvdPi5KoPkOKrd4ivK0uAUT0rjY5vcYr1NdvF7uAFDoInL/lj1X5gMMlEXp/g==
+gatsby-plugin-google-analytics@2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.2.tgz#65535f204ecd48357ffe67b4937a2cd00e90bf1b"
+  integrity sha512-61vrzskJd/b2yTmOpn+FnZF6yJDCo2GoxP6EnGPCK4oY6YHLh8K0S9LKRUEeMeFRcOu2Nk4FiUxQLoCjxQ7rvQ==
   dependencies:
-    "@babel/runtime" "^7.10.3"
+    "@babel/runtime" "^7.9.6"
     minimatch "3.0.4"
 
 gatsby-plugin-meta-redirect@^1.1.0:
