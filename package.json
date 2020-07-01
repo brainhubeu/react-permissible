@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.9.9",
+  "version": "1.9.10",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=6.14.5"
@@ -27,7 +27,7 @@
     "lodash.intersection": "^4.4.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
@@ -51,7 +51,7 @@
     "coveralls": "^3.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^7.2.0",
+    "eslint": "^7.3.1",
     "eslint-config-brainhub": "^1.13.0",
     "eslint-plugin-typescript": "^0.14.0",
     "eslint-watch": "^7.0.0",
@@ -66,7 +66,7 @@
     "react-test-renderer": "^16.13.1",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.5.0",
-    "typescript": "^3.9.3",
+    "typescript": "^3.9.5",
     "typescript-eslint-parser": "^21.0.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.43.0"
