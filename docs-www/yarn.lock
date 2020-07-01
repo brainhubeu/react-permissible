@@ -30,7 +30,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@brainhubeu/gatsby-docs-kit@^1.0.10":
+"@brainhubeu/gatsby-docs-kit@1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@brainhubeu/gatsby-docs-kit/-/gatsby-docs-kit-1.0.10.tgz#86198cc975693571d3886611a040f161ac60948f"
   integrity sha512-yZrwOe0fedcC0TJD7bf293mdVCjzw0fpCgIlTQEEfg5oaRTs5S0QOzVP0p5nvvz2y0THbPQ0eGPldCeZ6Oey5Q==
@@ -4631,9 +4631,10 @@ gatsby-transformer-yaml@^1.5.16:
     lodash "^4.17.4"
     unist-util-select "^1.5.0"
 
-gatsby@^1.9.279:
+gatsby@1.9.279:
   version "1.9.279"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.279.tgz#e035bcac78b8280e12d42a3d068af4dcda5fcfd6"
+  integrity sha512-JpXW0l2bWpqxlrjnFm4GSoy1JgFaI9p9rlKOzDGBaLnwFHDHp2G8tgbcQmIH+RNf5m5okPDSgJySS/PjaKjWeg==
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
