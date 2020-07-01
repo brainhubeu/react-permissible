@@ -1,6 +1,6 @@
 {
   "name": "@brainhubeu/react-permissible",
-  "version": "1.9.10",
+  "version": "1.9.11",
   "description": "Permission management component for React",
   "engines": {
     "npm": ">=6.14.5"
