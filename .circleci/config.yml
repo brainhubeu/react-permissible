@@ -2,13 +2,13 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: circleci/node:14.4.0
+      - image: circleci/node:17.2.0
     working_directory: ~/app
 
 jobs:
   check_branch_name:
     docker:
-      - image: circleci/node:14.4.0
+      - image: circleci/node:17.2.0
     working_directory: ~/app
     steps:
       - run:
@@ -25,7 +25,7 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: circleci/node:14.4.0
+      - image: circleci/node:17.2.0
     steps:
       - checkout
       - restore_cache:
@@ -61,7 +61,7 @@ jobs:
             - coverage
   lint:
     docker:
-      - image: circleci/node:14.4.0
+      - image: circleci/node:17.2.0
     steps:
       - checkout
       - restore_cache:
@@ -78,7 +78,7 @@ jobs:
           command: npm run lint
   compile:
     docker:
-      - image: circleci/node:14.4.0
+      - image: circleci/node:17.2.0
     steps:
       - checkout
       - restore_cache:
