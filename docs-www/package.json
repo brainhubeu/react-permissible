@@ -1,7 +1,7 @@
 {
   "name": "@brainhubeu/gatsby-docs-kit-start",
   "description": "Gatsby-Docs-Kit starter repository",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "author": "Brainhub",
   "license": "MIT",
   "scripts": {
@@ -14,9 +14,9 @@
     "lint:autofix": "eslint --ext .jsx,.js . --fix"
   },
   "dependencies": {
-    "@brainhubeu/gatsby-docs-kit": "1.0.10",
+    "@brainhubeu/gatsby-docs-kit": "3.2.8",
     "@brainhubeu/react-permissible": "^1.9.13",
-    "gatsby": "1.9.279"
+    "gatsby": "5.13.7"
   },
   "devDependencies": {
     "eslint": "^7.3.1",
